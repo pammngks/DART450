@@ -1,0 +1,17 @@
+/*
+Week 01: January 10 2017
+Colour Change CSS
+
+Basic text styling
+*/
+
+body {
+	margin: 50px;
+}
+
+#text {
+	font-family: Helvetica, sans-serif;
+	font-size: 6em;
+	font-weight: bold;
+	color: black;
+}
