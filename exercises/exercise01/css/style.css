@@ -1,0 +1,21 @@
+/*
+
+Week 01: January 10 2017
+Text Change
+
+*/
+
+body {
+	margin: 50px;
+}
+
+#text {
+	font-family: Helvetica, sans-serif;
+	font-size: 60px;
+	font-weight: bold;
+	color: black;
+}
+
+span {
+	display: none;
+}
