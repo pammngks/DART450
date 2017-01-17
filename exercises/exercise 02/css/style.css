@@ -1,0 +1,17 @@
+/*
+
+Week 02: January 17 2017
+Narrative and Time
+
+*/
+
+body {
+	margin: 50px;
+}
+
+#text {
+	font-family: Helvetica, sans-serif;
+	font-size: 60px;
+	font-weight: bold;
+	color: black;
+}
