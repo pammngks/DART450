@@ -24,7 +24,7 @@ $(document).ready(function() {
   }
   $('#today').text(greeting);
 // madlibs
-  var madLibs = function() {
+  var madLibs = (function() {
     var story = document.getElementById("story");
     var name = document.getElementById("name").value;
     var noun = document.getElementById("noun").value;
