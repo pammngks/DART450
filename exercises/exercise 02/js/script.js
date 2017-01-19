@@ -6,5 +6,14 @@ Narrative and Times
 */
 
 $(document).ready(function() {
+  var date = new Date(); // gets date
+  var greeting = "Good";
+    if (now.getHours() > 17)
+      greeting += " evening.";
+    else
+      greeting += " day.";
 
+
+
+$('#today').text(greeting);
 });
