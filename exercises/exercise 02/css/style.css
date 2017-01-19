@@ -6,10 +6,11 @@ Narrative and Time
 */
 
 body {
-	margin: 50px;
+	margin: 0;
+	padding: 0;
 }
 
-#text {
+#today {
 	font-family: Helvetica, sans-serif;
 	font-size: 60px;
 	font-weight: bold;
