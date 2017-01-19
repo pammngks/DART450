@@ -16,3 +16,7 @@ body {
 	font-weight: bold;
 	color: black;
 }
+
+#today ul {
+	text-decoration: none;
+}
