@@ -5,7 +5,7 @@ Narrative and Times
 
 */
 
-$(document).ready(function() {
+$(document).ready(function(){
   //greeting message
   var date = new Date().getHours();
   var greeting;
@@ -24,7 +24,7 @@ $(document).ready(function() {
   }
   $('#today').text(greeting);
 // madlibs
-  var madLibs = (function() {
+  var madLibs = function(){
     var story = document.getElementById("story");
     var name = document.getElementById("name").value;
     var noun = document.getElementById("noun").value;
@@ -32,9 +32,8 @@ $(document).ready(function() {
     story.innerHTML = name + " something" + adjective + "  something" + noun + " something!";
   }
 
-$(document).ready(function(){
+
   $('#generate').click(function(){
     madLibs();
   });
-});
 });

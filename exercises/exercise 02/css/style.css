@@ -18,5 +18,10 @@ body {
 }
 
 #today ul {
-	text-decoration: none;
+	list-style: none;
+	font-size: 20px;
+}
+
+button {
+	font-size: 30px;
 }
