@@ -32,4 +32,9 @@ $(document).ready(function() {
     story.innerHTML = name + " something" + adjective + "  something" + noun + " something!";
   }
 
+$(document).ready(function(){
+  $('#generate').click(function(){
+    madLibs();
+  });
+});
 });
