@@ -22,6 +22,7 @@ $(document).ready(function() {
   else if (date >= 17 && date < 24) {
     greeting = evening;
   }
+  $('#today').text(greeting);
 // madlibs
   var madLibs = function() {
     var story = document.getElementById("story");
@@ -30,5 +31,5 @@ $(document).ready(function() {
     var adjective = document.getElementById("adjective").value;
     story.innerHTML = name + " something" + adjective + "  something" + noun + " something!";
   }
-$('#today').text(greeting);
+
 });
