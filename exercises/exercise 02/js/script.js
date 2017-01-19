@@ -6,6 +6,7 @@ Narrative and Times
 */
 
 $(document).ready(function() {
+  //greeting message
   var date = new Date().getHours();
   var greeting;
   var morning = ('Good morning');
@@ -21,7 +22,13 @@ $(document).ready(function() {
   else if (date >= 17 && date < 24) {
     greeting = evening;
   }
-
-
+// madlibs
+  var madLibs = function() {
+    var story = document.getElementById("story");
+    var name = document.getElementById("name").value;
+    var noun = document.getElementById("noun").value;
+    var adjective = document.getElementById("adjective").value;
+    story.innerHTML = name + " something" + adjective + "  something" + noun + " something!";
+  }
 $('#today').text(greeting);
 });
