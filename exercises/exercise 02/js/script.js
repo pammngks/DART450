@@ -9,9 +9,9 @@ $(document).ready(function(){
   //greeting message
   var date = new Date().getHours();
   var greeting;
-  var morning = ('Good morning');
-  var afternoon = ('Good afternoon');
-  var evening = ('Good evening');
+  var morning = ('Good morning!');
+  var afternoon = ('Good afternoon!');
+  var evening = ('Good evening!');
 
   if (date >= 0 && date < 12) {
     greeting = morning;
