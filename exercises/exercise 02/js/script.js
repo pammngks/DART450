@@ -6,12 +6,14 @@ Narrative and Times
 */
 
 $(document).ready(function(){
+  //enter name
+  var userName = prompt ("Enter your name", "");
   //greeting message
   var date = new Date().getHours();
   var greeting;
-  var morning = ('Good morning!');
-  var afternoon = ('Good afternoon!');
-  var evening = ('Good evening!');
+  var morning = ('Good morning,');
+  var afternoon = ('Good afternoon,');
+  var evening = ('Good evening,');
 
   if (date >= 0 && date < 12) {
     greeting = morning;
@@ -23,15 +25,16 @@ $(document).ready(function(){
     greeting = evening;
   }
   $('#today').text(greeting);
+  document.write(greeting + " " + userName + "!");
 // madlibs
   var madLibs = function(){
     var story = document.getElementById("story");
-    var name = document.getElementById("name").value;
     var noun = document.getElementById("noun").value;
     var adjective = document.getElementById("adjective").value;
-    story.innerHTML = name + " something" + adjective + "  something" + noun + " something!";
+    var place = document.getElementById("place").value;
+    var color = document.getElementById("color").value;
+    story.innerHTML = name + place + " something" + adjective + "  something" + noun + color + " something!";
   }
-
 
   $('#generate').click(function(){
     madLibs();
