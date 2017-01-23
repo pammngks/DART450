@@ -14,8 +14,7 @@ Narrative and Time
 }
 
 #form {
-	font-family: Helvetica, sans-serif;
-	color: black;
+font-family: 'Roboto', sans-serif;
 	padding-top: 20px;
 	list-style: none;
 	display: block;
@@ -23,25 +22,28 @@ Narrative and Time
 
 input {
 	border: 0;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #b03c63;
 	height: 40px;
 	width: 300px;
 	font-size: 30px;
 	display: block;
 	padding-top: 30px;
 	margin: 0 auto;
+	color: #b03c63
 }
+
+
 
 input:focus {
 	outline: none;
 }
 
-
 #generate {
 	display: block;
 	margin: 0 auto;
-	margin-top: 20px;
+	margin-top: 40px;
 }
+
 button {
 	color: #202129;
 	background-color: #edeeee;
@@ -51,8 +53,8 @@ button {
 	transition: all 60ms ease-in-out;
   border: 0 none;
   border-radius: 4px;
-	font-size: 14px;
-	font-weight: 500;
+	font-size: 18px;
+font-family: 'Roboto', sans-serif;
 }
 button:hover {
     color: #202129;
@@ -70,12 +72,11 @@ button:active {
  }
 
 #story {
-	font-size: 20px;
-	font-family: sans-serif;
-	margin: 15% auto;
-	width: 80%;
-	padding: 20px;
-	background-color: #fefefe;
+	font-size: 100px;
+	font-family: 'Roboto', sans-serif;
+margin-left: auto;
+margin-right: auto;
+width: 80%;
 }
 	#modal {
 	display: none;
@@ -86,6 +87,6 @@ button:active {
 	left: 0;
 	z-index: 1;
 	overflow: auto;
-	background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+  background-color: #b03c63;
+	color: #fff;
 }
