@@ -6,14 +6,12 @@ Narrative and Times
 */
 
 $(document).ready(function(){
-  //enter name
-  var userName = prompt ("Enter your name", "");
   //greeting message
   var date = new Date().getHours();
   var greeting;
-  var morning = ('Good morning,');
-  var afternoon = ('Good afternoon,');
-  var evening = ('Good evening,');
+  var morning = ('Good morning, please enter the following:');
+  var afternoon = ('Good afternoon, please enter the following:');
+  var evening = ('Good evening, please enter the following:');
 
   if (date >= 0 && date < 12) {
     greeting = morning;
@@ -24,17 +22,22 @@ $(document).ready(function(){
   else if (date >= 17 && date < 24) {
     greeting = evening;
   }
+
   $('#today').text(greeting);
-  document.write(greeting + " " + userName + "!");
+
 // madlibs
-  var madLibs = function(){
-    var story = document.getElementById("story");
-    var noun = document.getElementById("noun").value;
+    var madLibs = function(){
     var adjective = document.getElementById("adjective").value;
-    var place = document.getElementById("place").value;
     var color = document.getElementById("color").value;
-    story.innerHTML = name + place + " something" + adjective + "  something" + noun + color + " something!";
-  }
+    var animal = document.getElementById("animal").value;
+    var verb = document.getElementById("verb").value;
+    var adjective2 = document.getElementById("adjective2").value;
+    var animal2 = document.getElementById("animal2").value;
+    var space = ' '
+    var story = "The " + adjective + space + color + space + animal + space + verb + " over the " + adjective2 + space + animal2 + '.';
+    document.getElementById('story').innerHTML = story;
+}
+
 
   $('#generate').click(function(){
     madLibs();

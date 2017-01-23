@@ -5,25 +5,50 @@ Narrative and Time
 
 */
 
-body {
-	margin: 0;
-	padding: 0;
-}
-
 #today {
-	font-family: Helvetica, sans-serif;
-	font-size: 60px;
-	font-weight: bold;
-	color: black;
+	display: block;
 	text-align: center;
-	padding-top: 20px;
-}
-
-#today ul {
-	list-style: none;
+	margin-top: 70px;
 	font-size: 20px;
+	font-family: sans-serif;
 }
 
-button {
+#form {
+	font-family: Helvetica, sans-serif;
+	color: black;
+	padding-top: 20px;
+	list-style: none;
+	display: block;
+}
+
+input {
+	border: 0;
+	border-bottom: 1px solid black;
+	height: 40px;
+	width: 300px;
 	font-size: 30px;
+	display: block;
+	padding-top: 30px;
+	margin: 0 auto;
+}
+
+input:focus {
+	outline: none;
+}
+
+
+#generate {
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+#story {
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+#popup {
+	height: 100vh;
+	width: 100vw;
 }
