@@ -42,4 +42,11 @@ $(document).ready(function(){
   $('#generate').click(function(){
     madLibs();
   });
+
+  var modal = document.getElementById('modal');
+  var btn = document.getElementById('generate');
+
+  btn.onclick = function(){
+    modal.style.display = "block";
+  }
 });
