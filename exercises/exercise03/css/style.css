@@ -1,10 +1,13 @@
 /*
 
-Ugly
-Pippin Barr
+It's Supposed To Look Like Shit
 
 */
 
-#circle {
+div {
+  background-color: red;
+  height: 10px;
+  margin: 5px;
   border-radius: 50%;
+  float: left;
 }
