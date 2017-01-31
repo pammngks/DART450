@@ -4,10 +4,29 @@ It's Supposed To Look Like Shit
 
 */
 
-div {
-  background-color: red;
-  height: 10px;
-  margin: 5px;
-  border-radius: 50%;
-  float: left;
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.5em;
+}
+
+#poem {
+  font-size: 1em;
+  padding: 2em;
+  line-height: 1.5em;
+}
+
+#title {
+  font-size: 2em;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+.line {
+
+}
+
+.image {
+  position: absolute;
+  z-index: -1;
+  height: 100px;
 }
