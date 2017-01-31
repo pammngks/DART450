@@ -29,11 +29,11 @@ function circle (x, y) {
   var circ = $('<div></div>'); 
   circ.css({ 
     position: 'absolute',
-    width: '20px',
-    height: '20px', 
+    width: '40px',
+    height: '40px', 
     top: y + 'px',
     left: x + 'px', 
-    backgroundColor: 'rgba(246, 106, 106, 0.83)',
+    backgroundColor: 'rgba(246, 106, 106, 0.4)',
     borderRadius: '50%'
   }); 
 
