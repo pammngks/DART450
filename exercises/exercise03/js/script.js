@@ -33,7 +33,7 @@ function circle (x, y) {
     height: '20px', 
     top: y + 'px',
     left: x + 'px', 
-    backgroundColor: 'rgba(106, 235, 246, 0.5)',
+    backgroundColor: 'rgba(246, 106, 106, 0.83)',
     borderRadius: '50%'
   }); 
 
