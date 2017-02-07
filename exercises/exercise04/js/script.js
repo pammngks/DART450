@@ -1,41 +1,33 @@
 /*
 
-It's Supposed To Look Like Shit
+Play Array
 
 */
 
-$(document).ready(function() {
+var bubbles = [];
 
-  const NUM_RANDOM_CIRCLES = 100;
-
-  var circPosition = {
-    x: 100,
-    y: 100
+function setup() {
+  for (var i=0; i<4; i++) {
+    bubbles[i] = {
+      x: random(0,width),
+      y: random(0,height),
+      display: function() {
+        stroke(255);
+        noFill();
+        ellipse(this.x, this.y, 24, 24);
+      },
+      move: function() {
+        this.x = this.x + random(-1,1);
+        this.y = this.y + random(-1,1);
+      }
+    }
   }
+}
 
-  var circ = circle(circPosition.x,circPosition.y);
-
-  $('body').append(circ);
-
-  for (var i = 0; i < NUM_RANDOM_CIRCLES; i++) {
-    var x = Math.random() * $(document).width();
-    var y = Math.random() * $(document).height();
-    var r = circle(x,y);
-    $('body').append(r);
+function draw() {
+  background(0);
+  for (var i=0; i < bubbles.length; i++) {
+    bubbles[i].move();
+    bubbles[i].display();
   }
-});
-
-function circle (x, y) {
-  var circ = $('<div></div>'); 
-  circ.css({ 
-    position: 'absolute',
-    width: '40px',
-    height: '40px', 
-    top: y + 'px',
-    left: x + 'px', 
-    backgroundColor: 'rgba(246, 106, 106, 0.4)',
-    borderRadius: '50%'
-  }); 
-
-  return circ;
 }
