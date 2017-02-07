@@ -11,13 +11,17 @@ body {
 
 #click {
   display: block;
-  background-color: orange;
+  background-color: rgba(255,0,0,0.4);
   width: 100px;
   padding: 10px;
   text-align: center;
   color: black;
   text-decoration: none;
   margin: 0 auto;
+}
+
+#click:hover {
+  background-color: rgba(255,0,0,0.3);
 }
 
 p {

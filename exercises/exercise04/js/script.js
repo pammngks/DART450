@@ -7,7 +7,7 @@ Play Array
 $(document).ready(function(){
 
 
-var myArray = ["world", "universe", "person"];
+var myArray = ["world", "universe", "person", "you"];
 var myIndex = 1;
 var print = document.getElementById('print');
 
