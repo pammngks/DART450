@@ -4,19 +4,22 @@ Play Array
 
 */
 
+$(document).ready(function(){
 
-// document.addEventListener( "click", function toggleWords (event) {
-//
-//     var target = event.target, values = [], placed;
-//
-// // If clicked element has multiple values
-//     if ( target.hasAttribute("data-values") ) {
-// // Split values into array
-//         values = target.getAttribute("data-values").split(",");
-// // Find location
-//         placed = values.indexOf(target.textContent);
-// // Change text to next value in array
-//         target.textContent = values[++placed % values.length];
-//       }
-//
-//   });
+
+var myArray = ["world", "universe", "person"];
+var myIndex = 1;
+var print = document.getElementById('print');
+
+print.innerHTML = myArray[0];
+
+$('#click').click(function (){
+  nextElement();
+})
+
+function nextElement() {
+   print.innerHTML = myArray[myIndex];
+   myIndex = (myIndex+1)%(myArray.length);
+};
+
+});
