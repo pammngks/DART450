@@ -6,29 +6,16 @@
 
 $(document).ready(function() {
   $('#button').click (function(){
-    responsiveVoice.speak("You're wasting time, idiot.","UK English Female");
+    responsiveVoice.speak("You're wasting time, idiot.","UK English Female"); // voice on click of button
     var toAdd = $('input[name=listItem]').val();
-    $('ol').append('<li>' + toAdd + '</li>');
+    $('ol').append('<li>' + toAdd + '</li>'); // adds input to list
   });
 
   $(document).on('dblclick', 'li', function(){
-    $(this).toggleClass('strike').fadeOut('slow');
-    responsiveVoice.speak("But did you actually do it?","UK English Female");
-  });
-
-  $('input').focus(function(){
-    $(this).val('');
+    $(this).toggleClass('strike').fadeOut('slow'); // strike-through when user double clicks item + fade
+    responsiveVoice.speak("But did you actually do it?","UK English Female"); // voice on double click
   });
 
   $('ol').sortable();
 }
 );
-
-
-
-
-
-// $(document).click(function() { // on page click
-//   responsiveVoice.speak("Just get started on it already","US English Male");
-// });
-// });0.5
