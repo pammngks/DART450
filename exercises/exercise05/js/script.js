@@ -1,12 +1,12 @@
 /*
 
-Responsive Voice
+&&##%$ you!
 
 */
 
 $(document).ready(function() {
 
-$(document).click(function() { // on page click
-  responsiveVoice.speak("How you doing?","US English Male",{pitch:0.5, rate:0.5});
-});
-});0.5
+// $(document).click(function() { // on page click
+//   responsiveVoice.speak("Just get started on it already","US English Male");
+// });
+// });0.5
