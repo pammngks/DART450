@@ -7,7 +7,7 @@ Responsive Voice
 
 body {
   background-color: rgb(231,211,33);
-  font: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .container {
@@ -16,6 +16,7 @@ body {
   margin: 0 auto;
   margin-top: 40px;
   background: white;
+  border-radius: 2%;
 }
 
 form {
@@ -24,6 +25,8 @@ form {
 
 input {
   padding: 4px 15px 4px 15px;
+  height: 25px;
+  width: 200px;
 }
 
 #button {
@@ -33,6 +36,8 @@ input {
   text-align: center;
   margin-top: 2px;
   padding: 5px 15px;
+  border-radius: 3%;
+  height: 25px;
 }
 
 #button:hover {
