@@ -1,9 +1,8 @@
 /*
 
-Title of project
-Author's name
-
-Description of this script in the context of the project
+Assignment 01: Interactive Personality
+Pam Menegakis
+February 2017
 
 */
 
