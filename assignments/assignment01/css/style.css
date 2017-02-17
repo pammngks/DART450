@@ -27,6 +27,34 @@ background: linear-gradient(to right, #acd4f2,#f75d99); /* Standard syntax */
   height: 25px;
 }
 
+#desktop {
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  /*background-color: pink;*/
+}
+
+#desktop a {
+  text-decoration: none;
+}
+
+.folder img {
+  width: 64px;
+  height: 64px;
+}
+
+.folder p {
+  font-size: 12px;
+  display: inline;
+  position: relative;
+  bottom: 20px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 2px 2px 2px black;
+}
+
 #date {
   float: right;
   margin-right: 2%;
