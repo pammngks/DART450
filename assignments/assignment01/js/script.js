@@ -6,7 +6,8 @@ February 2017
 
 */
 
-  // Display date and time
+// Display date and time in taskbar
+
 $(document).ready(function(){
 
   var currentDate = new Date (); // returns current date
