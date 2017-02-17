@@ -16,11 +16,14 @@ body {
   left: 0;
   width: 100%;
   background-color: rgb(230,230,230);
-  height: 20px;
+  height: 25px;
 }
 
 #date {
   float: right;
+  margin-right: 2%;
+  font-size: 14px;
+  list-style: none;
 }
 
 #dock {
