@@ -7,7 +7,7 @@ February 2017
 */
 
 body {
-  background-color: aqua;
+  background-color: rgb(107,199,196);
 }
 
 #taskbar {
@@ -15,10 +15,18 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: grey;
-  height: 25px;
+  background-color: rgb(230,230,230);
+  height: 20px;
 }
 
 #date {
   float: right;
+}
+
+#dock {
+  background-color: rgba(230,230,230, 0.2);
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  height: 100px;
 }
