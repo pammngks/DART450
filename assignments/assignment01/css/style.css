@@ -7,6 +7,18 @@ February 2017
 */
 
 body {
-  font-size: 14px;
-  color: black;
+  background-color: aqua;
+}
+
+#taskbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: grey;
+  height: 25px;
+}
+
+#date {
+  float: right;
 }
