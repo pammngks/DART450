@@ -6,8 +6,11 @@ February 2017
 
 */
 
-$(document).ready(function() {
+  // Display date and time
+$(document).ready(function(){
+  var currentDate = new Date (); // gets current date
+  var monthNames = ["Jan", "Feb", "Mar", "Apr", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+  var dayNames = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri"];
 
-  // Write code in here that will run when the document is loaded
-
+  // document.getElementById('date').innerHTML="text";
 });
