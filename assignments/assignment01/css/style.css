@@ -8,8 +8,14 @@ February 2017
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
-  background-color: rgb(107,199,196);
+  background: #acd4f2; /* For browsers that do not support gradients */
+background: -webkit-linear-gradient(left, #acd4f2,#f75d99); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(right, #acd4f2,#f75d99); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(right, #acd4f2,#f75d99); /* For Firefox 3.6 to 15 */
+background: linear-gradient(to right, #acd4f2,#f75d99); /* Standard syntax */
   font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  widht: 100%;
 }
 
 #taskbar {
@@ -30,10 +36,20 @@ body {
 
 #dock {
   background-color: rgba(230,230,230, 0.2);
-  width: 80%;
+  width: 270px;
   position: absolute;
   left: 50%;
   bottom: 0;
-  height: 100px;
+  height: 90px;
   transform: translate(-50%,0);
+}
+
+#dock li {
+  display: inline-block;
+}
+
+#dock li img {
+  width: 64px;
+  height: 64px;
+  padding: 2px;
 }
