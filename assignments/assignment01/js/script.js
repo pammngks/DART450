@@ -29,7 +29,10 @@ $(document).ready(function(){
 
   document.getElementById('date').innerHTML=currentDate.toDateString() + " " + hours + ":" + minutes + " " + suffix; // display above variables in #date
 
-// on folder click open restricted access pop up
+// responsive voice on click of folder
+$('#folder').click (function(){
+  responsiveVoice.speak("restricted", "US English Male",{pitch: 0.5, rate: 1});
+});
 
 
 });
