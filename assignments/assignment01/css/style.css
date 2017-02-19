@@ -20,14 +20,13 @@ body {
   background: -moz-linear-gradient(right, #acd4f2,#f75d99); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right, #acd4f2,#f75d99); /* Standard syntax */
 }
-}
 
 #taskbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  background-color: rgb(230,230,230);
+  background-color: #eee;
   height: 25px;
 }
 
@@ -93,4 +92,127 @@ body {
   width: 64px;
   height: 64px;
   padding: 2px;
+}
+
+/* INSTAGRAM.HTML */
+
+.doc-browser {
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+}
+
+.window-bar {
+  height: 40px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(66,66,66,0.05);
+}
+
+.w-btn {
+  opacity: 0.75;
+  height: 10px;
+  width: 10px;
+  margin: 3px;
+  border-radius: 6px;
+  border: 1px solid rgba(66,66,66,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.w-btn:hover {
+  opacity: 1.0;
+}
+
+.w-close {
+   margin-left: 6px;
+   background-color: #e74c3c;
+ }
+ .w-min {
+   background-color: #f1c40f;
+ }
+ .w-max {
+   background-color: #27ae60;
+ }
+
+.w-tab {
+  width: 150px;
+  height: 0px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 30px solid #eee;
+  border-radius: 3px 3px 2px 2px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.insta-bar {
+  height: 80px;
+  background: #fff;
+}
+
+.insta-bar i {
+  font-size: 30px;
+  padding: 20px;
+  margin-left: 80px;
+}
+
+.insta-bar span {
+  padding-left: 22px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.insta-bar img {
+  width: 100px;
+  position: relative;
+  top: 10px;
+}
+
+.insta-content {
+  padding-left: 80px;
+  margin-top: 40px;
+}
+
+.profile {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  display: inline;
+}
+
+.insta-content ul {
+  display: inline-block;
+  position: relative;
+  top: -70px;
+  margin-left: 30px;
+  list-style: none;
+}
+
+.username {
+  font-size: 35px;
+}
+
+.bio {
+  margin-top: 15px;
+}
+
+.insta-grid {
+  padding: 70px;
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.insta-grid img{
+  max-height: 30%;
+  max-width: 30%;
+  display: inline-block;
 }
