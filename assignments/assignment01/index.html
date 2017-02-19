@@ -11,7 +11,6 @@ February 2017
 <html lang="en">
 
 <head>
-
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
   <title>Assignment 01</title>
@@ -28,6 +27,18 @@ February 2017
   <script src="js/script.js" content="text/javascript"></script>
   <!-- responsive voice script goes here -->
   <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+  <script language="JavaScript">
+  var links = new Array(2)
+  links[0] = "web/instagram.html"
+  links[1] = "web/instagram2.html"
+  links[2] = "web/instagram3.html"
+  function go() {
+  var a = 1+Math.round(Math.random()*2)
+  var i = a
+  location = links[i]
+  }
+  </script>
 </head>
 
 <!-- Comment about the body of the HTML -->
@@ -53,7 +64,7 @@ February 2017
 <div id="dock">
 <ul>
   <li><a href="#"><img src="images/spotify-ico.png"/></a></li>
-  <li><a href="web/instagram.html"><img src="images/chrome-ico.png"/></a></li>
+  <li><a href="javascript:go()" onclick="randomLink" id="changeMe"><img src="images/chrome-ico.png"></a></li>
   <li><a href="#"><img src="images/illustrator-ico.png"/></a></li>
 </ul>
 </div>
