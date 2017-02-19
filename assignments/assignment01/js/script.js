@@ -29,5 +29,7 @@ $(document).ready(function(){
 
   document.getElementById('date').innerHTML=currentDate.toDateString() + " " + hours + ":" + minutes + " " + suffix; // display above variables in #date
 
-  
+// on folder click open restricted access pop up
+
+
 });
