@@ -26,12 +26,13 @@ February 2017
 
   <!-- We include our own script file(s) -->
   <script src="js/script.js" content="text/javascript"></script>
-
+  <!-- responsive voice script goes here -->
+  <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 </head>
 
 <!-- Comment about the body of the HTML -->
 
-<body>
+<body class="main">
 <div id="taskbar">
   <li id="date"></li>
 </div>
@@ -39,19 +40,20 @@ February 2017
 <div id="desktop">
 
   <div id="container">
-    <div id="folder">
-      <a href="#">
-      <img src="images/folder-ico.png"/>
-      </a>
-      <p>personal</p>
-    </div>
-</div>
+      <div id="folder">
+        <a href="#" class="button">
+        <img src="images/folder-ico.png"/>
+        </a>
+        <p>personal</p>
+      </div>
+  </div>
+
 </div>
 
 <div id="dock">
 <ul>
   <li><a href="#"><img src="images/spotify-ico.png"/></a></li>
-  <li><a href="#"><img src="images/chrome-ico.png"/></a></li>
+  <li><a href="web/instagram.html"><img src="images/chrome-ico.png"/></a></li>
   <li><a href="#"><img src="images/illustrator-ico.png"/></a></li>
 </ul>
 </div>

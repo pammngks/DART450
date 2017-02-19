@@ -8,45 +8,61 @@ February 2017
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
-  background: #acd4f2; /* For browsers that do not support gradients */
-background: -webkit-linear-gradient(left, #acd4f2,#f75d99); /* For Safari 5.1 to 6.0 */
-background: -o-linear-gradient(right, #acd4f2,#f75d99); /* For Opera 11.1 to 12.0 */
-background: -moz-linear-gradient(right, #acd4f2,#f75d99); /* For Firefox 3.6 to 15 */
-background: linear-gradient(to right, #acd4f2,#f75d99); /* Standard syntax */
   font-family: 'Open Sans', sans-serif;
   height: 100%;
-  widht: 100%;
+  width: 100%;
+}
+
+.main {
+  background: #acd4f2; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #acd4f2,#f75d99); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #acd4f2,#f75d99); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #acd4f2,#f75d99); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #acd4f2,#f75d99); /* Standard syntax */
+}
 }
 
 #taskbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background-color: rgb(230,230,230);
   height: 25px;
 }
 
+#date {
+  float: right;
+  margin-right: 2%;
+  font-size: 14px;
+  list-style: none;
+}
+
 #desktop {
-  width: 100%;
-  height: 10%;
-  position: absolute;
-  top: 20%;
-  left: 25%;
-  /*background-color: pink;*/
+  width: 90%;
+  height: 500px;
+  position: relative;
+  margin: 0 auto;
+  top: 25px;
+  padding: 30px;
+  /*background: pink;*/
 }
 
 #desktop a {
   text-decoration: none;
 }
 
-#container {
-  width: 10%;
+#container { /* for folder location */
+  position: relative;
+  left: 20%;
+  top: 30%;
+  width: 20%;
+  /*background: blue;*/
 }
 
 #folder img {
-  width: 64px;
-  height: 64px;
+  width: 50px;
+  height: 50px;
 }
 
 #folder p {
@@ -57,13 +73,6 @@ background: linear-gradient(to right, #acd4f2,#f75d99); /* Standard syntax */
   color: white;
   font-weight: 600;
   text-shadow: 2px 2px 2px black;
-}
-
-#date {
-  float: right;
-  margin-right: 2%;
-  font-size: 14px;
-  list-style: none;
 }
 
 #dock {
