@@ -28,7 +28,7 @@ background: linear-gradient(to right, #acd4f2,#f75d99); /* Standard syntax */
 }
 
 #desktop {
-  width: 10%;
+  width: 100%;
   height: 10%;
   position: absolute;
   top: 20%;
@@ -40,12 +40,16 @@ background: linear-gradient(to right, #acd4f2,#f75d99); /* Standard syntax */
   text-decoration: none;
 }
 
-.folder img {
+#container {
+  width: 10%;
+}
+
+#folder img {
   width: 64px;
   height: 64px;
 }
 
-.folder p {
+#folder p {
   font-size: 12px;
   display: inline;
   position: relative;
@@ -65,7 +69,7 @@ background: linear-gradient(to right, #acd4f2,#f75d99); /* Standard syntax */
 #dock {
   background-color: rgba(230,230,230, 0.2);
   width: 270px;
-  position: absolute;
+  position: fixed;
   left: 50%;
   bottom: 0;
   height: 90px;
