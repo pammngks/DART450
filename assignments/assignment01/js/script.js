@@ -34,5 +34,30 @@ $('#folder').click (function(){
   responsiveVoice.speak("restricted", "US English Male",{pitch: 0.5, rate: 1});
 });
 
+// change color on refresh
+var imgColours = ['#b7d3f9', '#f6525f', '#ADE3D6'];
+
+for (var i=0; i < imgColours.length; i++) {
+    $('.img:eq('+i+')').css({backgroundColor: imgColours[i]});
+}
+
+var $imgs = $('#illustrator').find('.box'),
+    imgsCount = $imgs.length,
+    coloursCount = imgColours.length;
+
+for (var i=0; i < imgsCount; i++) {
+    var rnd = Math.floor(Math.random() * coloursCount),
+        color = imgColours[rnd];
+    $imgs.eq(i).css({backgroundColor: color});
+}
+
+
+
+// spotify responsive voice
+$('#music').click(function(){
+  responsiveVoice.speak("boom boom boom boom", "UK English Male");
+});
+//music
+
 
 });
