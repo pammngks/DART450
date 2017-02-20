@@ -1,0 +1,91 @@
+<!-- ************************************************************************
+
+Assignment 01: Interactive Personality
+Pam Menegakis
+February 2017
+
+************************************************************************ -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <title>Spotify</title>
+
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+  <!-- Including jQuery by default -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <!-- We include our own script file(s) -->
+  <script src="../js/script.js" content="text/javascript"></script>
+  <!-- responsive voice script goes here -->
+  <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+</head>
+
+<!-- Comment about the body of the HTML -->
+
+<body class="main">
+<div id="taskbar">
+  <li id="date"></li>
+</div>
+
+<div id="desktop">
+
+  <div id="container">
+      <div id="folder">
+        <a href="#" class="button">
+        <img src="../images/folder-ico.png"/>
+        </a>
+        <p>personal</p>
+      </div>
+  </div>
+
+  <div id="music">
+    <p> Listening to music </p>
+    <div class="equalizer">
+      <span class="bar bar-1"></span>
+      <span class="bar bar-2"></span>
+      <span class="bar bar-3"></span>
+    </div>
+  </div>
+
+
+</div>
+
+<div id="dock">
+<ul>
+  <li><a href="spotify.html"><img src="../images/spotify-ico.png"/></a></li>
+  <li><a href="javascript:openSite()" id="changeMe"><img src="../images/chrome-ico.png"></a></li>
+  <li><a href="illustrator.html"><img src="../images/illustrator-ico.png"/></a></li>
+</ul>
+</div>
+
+</body>
+<script>
+var links = [
+              "instagram.html",
+              "youtube.html",
+              "behance.html",
+              ]
+
+           var openSite = function() {
+              // get a random number between 0 and the number of links
+              var randIdx = Math.random() * links.length;
+              // round it, so it can be used as array index
+              randIdx = parseInt(randIdx, 3);
+              // construct the link to be opened
+              var link =  links[randIdx];
+
+    location = link;
+    };
+</script>
+
+</html>
