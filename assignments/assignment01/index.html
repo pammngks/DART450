@@ -73,15 +73,15 @@ February 2017
 <script>
 var links = [
               "instagram.html",
-              "instagram2.html",
-              "instagram3.html",
+              "youtube.html",
+              "behance.html",
               ]
 
            var openSite = function() {
               // get a random number between 0 and the number of links
               var randIdx = Math.random() * links.length;
               // round it, so it can be used as array index
-              randIdx = parseInt(randIdx, 10);
+              randIdx = parseInt(randIdx, 3);
               // construct the link to be opened
               var link = 'web/' + links[randIdx];
 
