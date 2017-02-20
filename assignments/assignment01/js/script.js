@@ -34,7 +34,5 @@ $('#folder').click (function(){
   responsiveVoice.speak("restricted", "US English Male",{pitch: 0.5, rate: 1});
 });
 
-// get random value on click of Google Chrome icon
-
 
 });
