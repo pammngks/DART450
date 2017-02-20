@@ -30,15 +30,18 @@ February 2017
 
 </head>
 
-<!-- Comment about the body of the HTML -->
+<!-- Media player mock up with voice over and animation -->
 
+<!-- Background image from home page remains in background with the class .main -->
 <body class="main">
+<!-- Time and date displayed on top -->
 <div id="taskbar">
   <li id="date"></li>
 </div>
 
 <div id="desktop">
 
+<!-- Container that holds the folder in place -->
   <div id="container">
       <div id="folder">
         <a href="#" class="button">
@@ -48,8 +51,10 @@ February 2017
       </div>
   </div>
 
+<!-- Spotify music player -->
   <div id="music">
     <p> Listening to music </p>
+  <!-- Animation elements -->
     <div class="equalizer">
       <span class="bar bar-1"></span>
       <span class="bar bar-2"></span>
@@ -57,9 +62,9 @@ February 2017
     </div>
   </div>
 
-
 </div>
 
+<!-- Desktop dock with three apps -->
 <div id="dock">
 <ul>
   <li><a href="spotify.html"><img src="../images/spotify-ico.png"/></a></li>
@@ -69,6 +74,8 @@ February 2017
 </div>
 
 </body>
+
+<!-- Access to javascript to generate random web page when image is clicked -->
 <script>
 var links = [
               "instagram.html",
@@ -76,16 +83,16 @@ var links = [
               "behance.html",
               ]
 
-           var openSite = function() {
-              // get a random number between 0 and the number of links
-              var randIdx = Math.random() * links.length;
-              // round it, so it can be used as array index
-              randIdx = parseInt(randIdx, 3);
-              // construct the link to be opened
-              var link =  links[randIdx];
+var openSite = function() {
+// get a random number between 0 and the number of links
+var randIdx = Math.random() * links.length;
+// round it, so it can be used as array index
+randIdx = parseInt(randIdx, 3);
+// construct the link to be opened
+var link =  links[randIdx];
 
-    location = link;
-    };
+location = link;
+};
 </script>
 
 </html>

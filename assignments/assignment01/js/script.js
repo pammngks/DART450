@@ -6,10 +6,10 @@ February 2017
 
 */
 
-// Display date and time in taskbar
+
 
 $(document).ready(function(){
-
+// Display date and time in taskbar
   var currentDate = new Date (); // returns current date
   var hours = currentDate.getHours(); // returns the hour (0-23)
   var minutes = currentDate.getMinutes(); // returns the minutes (0-59)
@@ -29,12 +29,12 @@ $(document).ready(function(){
 
   document.getElementById('date').innerHTML=currentDate.toDateString() + " " + hours + ":" + minutes + " " + suffix; // display above variables in #date
 
-// responsive voice on click of folder
+// responsive voice when folder is clicked
 $('#folder').click (function(){
   responsiveVoice.speak("restricted", "US English Male",{pitch: 0.5, rate: 1});
 });
 
-// change color on refresh
+// change color on page load
 var imgColours = ['#b7d3f9', '#f6525f', '#ADE3D6'];
 
 for (var i=0; i < imgColours.length; i++) {
@@ -45,19 +45,15 @@ var $imgs = $('#illustrator').find('.box'),
     imgsCount = $imgs.length,
     coloursCount = imgColours.length;
 
-for (var i=0; i < imgsCount; i++) {
+for (var i=0; i < imgsCount; i++) { // loop through colors 
     var rnd = Math.floor(Math.random() * coloursCount),
         color = imgColours[rnd];
     $imgs.eq(i).css({backgroundColor: color});
 }
 
-
-
-// spotify responsive voice
+// responsive voice when div is clicked
 $('#music').click(function(){
   responsiveVoice.speak("boom boom boom boom", "UK English Male");
 });
-//music
-
 
 });
