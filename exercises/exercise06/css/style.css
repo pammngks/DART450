@@ -3,3 +3,61 @@
 Surveillance
 
 */
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+body {
+  background-color: rgb(4,55,6);
+  background-image: url('../imgs/lines.png'); /* add line effect on background color*/
+  text-align: center;
+  margin-top: 50px;
+}
+
+p {
+  font-family: 'VT323', monospace;
+  font-size: 30px;
+  margin: auto;
+  color: #55ff55;
+}
+
+.laser { /* line that acts as laser to scan over video */
+  width: 100%;
+  background-color: #55ff55;
+  height: 1px;
+  position: absolute;
+  top: 10%;
+  z-index: 2; /* display laser over entire webpage */
+  box-shadow: 0 0 4px #55ff55;
+  animation: scanning 3s infinite;
+}
+
+@keyframes scanning { /* laser animation */
+  50% {
+    transform: translateY(550px);
+  }
+}
+
+.overlay {
+  position: fixed;
+  display: block;
+  width: 640px;
+  height: 480px;
+  background-image: url('../imgs/lines.png'); /* add line effect over video */
+  background-repeat: repeat;
+  z-index: 0; /* display lines on top of video */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0.8; /* create softer lines */
+}
+
+video, canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -1; /* display video in back of lines */
+}
