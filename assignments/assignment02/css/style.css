@@ -6,8 +6,15 @@ Pam Menegakis
 Some description of the CSS styling
 
 */
+body {
+  background-color: rgb(83,144,251);
+}
 
 h1 {
-  font-size: 30vw;
+  font-size: 10vh;
   text-align: center;
+  font-family: 'helvetica', sans-serif;
+  color: #fff;
+  top: 50%;
+  left: 0;
 }
