@@ -6,3 +6,8 @@ Pam Menegakis
 Some description of the CSS styling
 
 */
+
+h1 {
+  font-size: 30vw;
+  text-align: center;
+}
