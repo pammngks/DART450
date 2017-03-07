@@ -6,3 +6,87 @@ Author's name
 Some description of the CSS styling
 
 */
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+div {
+  padding: 50px;
+  font-family: "din-2014", sans-serif;
+}
+
+#title {
+  background-color: #F6A441;
+}
+
+#title h1 {
+  font-size: 8vw;
+  color: #fff;
+}
+
+.intro, #title {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro h2 {
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+  font-size: 10vh;
+}
+
+#intro1 {
+  background-color: #3BEED0;
+  height: 100vh;
+}
+
+#intro2 {
+  background-color: #FA6C57;
+}
+
+#intro3 {
+    background-color: #C787F7;
+}
+
+#mockup a {
+  text-decoration: none;
+  font-size: 8vh;
+}
+
+
+#mockup h1 {
+  color: rgb(236,176,44);
+  margin-bottom: 3%;
+}
+
+#mockup img {
+  width: 45%;
+  display: inline-block;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+.large {
+  float: left;
+}
+
+#code1 {
+  background-color: rgb(8,224,172);
+  padding: 50px;
+}
+
+#code2 {
+  background-color: rgb(216,81,241);
+  padding: 50px;
+}
+
+#code3 {
+  background-color: rgb(249,184,40);
+  padding: 50px;
+}
