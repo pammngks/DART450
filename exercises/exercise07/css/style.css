@@ -24,10 +24,10 @@ h1 {
 /* Make the background have a gradient so that when the user scrolls the color gradually changes */
 .container {
   min-height: 100vh;
-  background-color: linear-gradient(rgb(245,180,54), rgb(238,57,8));
-  background-color: -webkit-linear-gradient(rgb(245,180,54), rgb(238,57,8));
-  background-color: -mox-linear-gradient(rgb(245,180,54), rgb(238,57,8));
-  background-color: -o-linear-gradient(rgb(245,180,54), rgb(238,57,8));
+  background: linear-gradient(rgb(245,180,54), rgb(238,57,8));
+  background: -webkit-linear-gradient(rgb(245,180,54), rgb(238,57,8));
+  background: -mox-linear-gradient(rgb(245,180,54), rgb(238,57,8));
+  background: -o-linear-gradient(rgb(245,180,54), rgb(238,57,8));
 }
 
 /* In order to center text horizontally and vertically */
