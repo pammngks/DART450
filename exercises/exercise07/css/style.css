@@ -3,47 +3,35 @@
 Exercise 07: Scrooooooooooooooolling
 Pam Menegakis
 
+Minimal styling to web page: Large body text and a gradient background to complement the scrolling effect.
+
 */
 
-body {
-  color: #fff;
-  font-family: 'Helvetica', sans-serif;
+/* css reset */
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 h1 {
   margin: 0;
   font-size: 100px;
+  color: #fff;
+  font-family: 'Helvetica', sans-serif;
 }
 
+/* Make the background have a gradient so that when the user scrolls the color gradually changes */
 .container {
-  min-height: 300vh;
-  background: tomato;
+  min-height: 100vh;
+  background: linear-gradient(rgb(245,180,54), rgb(238,57,8));
 }
 
-.scroll-deck {
+/* In order to center text horizontally and vertically */
+.scrollBox {
   height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.scroll-deck1 {
-  h1 {
-    opacity: 0;
-    &.active {
-      animation: reveal 0.5s ease 1s backwards;
-    }
-  }
-}
-
-@keyframes reveal {
-  from {
-    transform: translate3d(-20px, 0, 0);
-    opacity: 0;
-  }
-  to {
-    transform: translate3d(0,0,0);
-    opacity: 1;
-  }
 }
