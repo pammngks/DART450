@@ -7,25 +7,55 @@ Pam Menegakis
 Use blast.js to search for specific words within a paragraph of text.
 
 */
-
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 
 body {
-  margin-top: 2em;
-  margin-left: 2em;
+  margin: 30px;
+  font-family: 'Titillium Web', sans-serif;
+  background-color: rgb(84,251,201);
+}
+
+#container {
+  width: 80%;
+  background-color: #fff;
+  padding: 30px;
+  margin: 0 auto;
+  border-radius: 10px;
+  height: 100vh;
 }
 
 #content {
-  font-family: sans-serif;
-  font-size: 2em;
-  font-weight: bold;
-  width: 50%;
+  font-size: 20px;
+  width: 70%;
 }
 
-.pressed {
-  background-color: yellow;
-}
-
-a, a:hover, a:visited {
-  color: #000;
+h1 {
   text-decoration: underline;
+}
+
+p {
+  display: block;
+  position: relative;
+  float: right;
+}
+
+#search {
+  width: 220px;
+}
+
+#go {
+  height: 100px;
+}
+
+.search {
+  background-color: #cf0;
+  font-size: 50px /* Background color of the first search element */
+}
+
+#search-1 {
+  background-color: #f7cc33; /* Change the background color of the second search element */
+}
+
+#search-2 {
+  background-color: #f333f7; /* Change the background color of the third search element */
 }
