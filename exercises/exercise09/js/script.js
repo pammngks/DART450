@@ -3,19 +3,14 @@
 Exercise 09: Data
 Pam Menegakis
 
-Chooses random tasks from local JSON data to fill out a command.
+Chooses random tasks from local JSON data to fill out a command. Each task is then draggable around the web page.
 
 */
 
 
 $(document).ready(function() {
 
-  // The first thing we need to do is load the data we're going
-  // to use to get random words.
-  //
-  // For that we use jQuery's .getJSON() function, which we give
-  // the location of the file, and a function to call when the data
-  // is available...
+  // Load the data we're going to use to get random tasks.
   $.getJSON('data/data.json', gotData);
 
 // gotData (data)
