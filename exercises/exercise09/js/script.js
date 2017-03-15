@@ -18,8 +18,6 @@ $(document).ready(function() {
   // is available...
   $.getJSON('data/data.json', gotData);
 
-});
-
 // gotData (data)
 //
 // This function gets called by getJSON when the data has been loaded.
@@ -29,16 +27,37 @@ function gotData (data) {
   // Get a task
   var task = getRandomElement(data.task);
   $('#need').text(task);
-
+  // Get a second task
   var task = getRandomElement(data.task);
   $('#should').text(task);
-
+  // Get a third task
   var task = getRandomElement(data.task);
   $('#why').text(task);
 }
 
-// getRandomElement
+// Get a random task every time the page loads
 
 function getRandomElement(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
+
+// Go through each div on the page...
+$('div').each(function() {
+
+  // Select a random location anywhere within the window
+  var x = $(window).width() * Math.random();
+  var y = $(window).height() * Math.random();
+
+  // Set the current div's CSS to put it at our random location
+  // by using its offset
+  $(this).css({
+    position: 'absolute',
+    top: y + 'px',
+    left: x + 'px'
+  });
+
+  // Make the current div draggable by using jQuery UI's .draggable()
+  $(this).draggable();
+
+});
+});
