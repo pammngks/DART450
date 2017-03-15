@@ -29,24 +29,9 @@ function gotData (data) {
   // our JSON to get a random condiment, cat, and room. Then add those
   // words onto our page by setting the text of the appropriate span.
 
-  // First the condiment
-  var condiment = getRandomElement(data.condiments);
-  $('#condiment').text(condiment);
-
-  // Now the cat.
-  var cat = getRandomElement(data.cats);
-  // But note that a cat can start with a consonant or a vowel,
-  // so we need to choose 'a' or 'an' appropriately with a function
-  var catArticle = getArticle(cat);
-  $('#cat').text(catArticle + " " + cat);
-
-  // Same again for rooms
-  var room = getRandomElement(data.rooms);
-  var roomArticle = getArticle(room);
-  $('#room').text(roomArticle + " " + room);
-
-  // And yes I'm aware that if the condiment is a plural this
-  // code incorrectly uses 'is'. Sigh.
+  // Get a task
+  var task = getRandomElement(data.task);
+  $('#task').text(task);
 }
 
 // getArticle (string)
