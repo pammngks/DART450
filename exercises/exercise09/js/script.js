@@ -41,7 +41,7 @@ function getRandomElement(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-// Go through each div on the page...
+// Go through each div on the page
 $('div').each(function() {
 
   // Select a random location anywhere within the window
