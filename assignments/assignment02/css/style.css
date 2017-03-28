@@ -110,7 +110,7 @@ DASHBOARD
 
 #taskList {
   padding: 20px;
-  width: 25%;
+  width: 50%;
   margin: 0 auto;
   background-color: white;
   border-radius: 2px;
@@ -161,8 +161,9 @@ ul li {
 
 /* Progress Bar */
 #progressBar {
-  height: 10%;
+  height: 50px;
   background-color: white;
+  font-size: 14px;
   width: 100%;
   position: fixed;
   bottom: 0px;
