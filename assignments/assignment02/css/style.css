@@ -21,43 +21,35 @@ Some description of the CSS styling
 }
 
 .login {
-  background-color: #ccc;
-  max-width: 300px;
-  margin: -100px 0 0 -150px;
-  position: absolute;
-  top: 50%;
+  background-color: #eee;
+  margin: 0 auto;
+  padding: 20px;
   left: 50%;
-}
-
-#check {
-  display: block;
+  top: 50%;
   position: absolute;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+   -moz-transform: translate3d(-50%, -50%, 0);
+   transform: translate3d(-50%, -50%, 0);
 }
-
-form {
-  display: inline-block;
-  position: relative;
-  max-width: 360px;
-  padding: 45px;
-  text-align: center;
-}
-
-input {
+.login input {
+  display: block;
   width: 100%;
-  outline: 0;
-  background: #f2f2f2;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
   font-size: 14px;
+  padding: 15px;
+}
+
+.login label {
+  font-size: 14px;
+  padding: 15px;
 }
 
 .enter {
   outline: 0;
-  width: 100%;
   border: 0;
   padding: 15px;
   font-size: 14px;
   cursor: pointer;
+  margin-top: 15px;
+  display: block;
+  width: 100%;
 }
