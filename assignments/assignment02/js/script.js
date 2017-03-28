@@ -7,6 +7,11 @@ Pam Menegakis
 
 $(document).ready(function() {
 
-  // Write code in here that will run when the document is loaded
+$('.enter').click(function(){
+  if (!$('#check').is(':checked')){
+    alert('Please confirm that you are not a robot.');
+    return false;
+  }
+});
 
 });
