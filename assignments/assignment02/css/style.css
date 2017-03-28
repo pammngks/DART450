@@ -96,7 +96,7 @@ DASHBOARD
 /* Task counter */
 .counter {
   background-color: white;
-  border-radius: 50%;
+  border-radius: 5px;
   width: 100px;
   height: 100px;
   vertical-align: middle;
@@ -104,6 +104,8 @@ DASHBOARD
   margin: 1.5%;
   text-align: center;
   float: right;
+  line-height: 100px;
+  color: #374954;
 }
 
 /* Task List */
