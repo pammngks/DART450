@@ -60,3 +60,63 @@ body {
   display: block;
   width: 100%;
 }
+
+/*
+
+DASHBOARD
+
+*/
+
+/* Task List */
+
+#taskList {
+  padding: 20px;
+  max-width: 40%;
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+#taskList form {
+  display: inline-block;
+  width: 90%;
+}
+
+#taskList input {
+  padding: 4px 15px 4px 15px;
+  height: 35px;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+  text-align: center;
+  background-color: rgb(213,213,213);
+}
+
+#add {
+  display: inline-block;
+  text-align: center;
+  margin-top: 2px;
+  padding: 5px 15px;
+  height: 25px;
+  float: right;
+}
+
+#add:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+ul {
+  padding-left: 20px;
+  font-size: 14px;
+  list-style-type: circle;
+}
+
+ul li {
+  padding: 5px;
+}
+
+.strike {
+  text-decoration: line-through;
+}
