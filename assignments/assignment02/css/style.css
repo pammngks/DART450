@@ -7,8 +7,10 @@ Some description of the CSS styling
 
 */
 
+/* Webpage fonts */
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
+/* Reset the entire body */
 * {
   border: 0;
   margin: 0;
@@ -20,6 +22,7 @@ body {
   background-color: #374954;
 }
 
+/* styling for the login form */
 .login {
   background-color: #eee;
   max-width: 400px;
@@ -30,7 +33,7 @@ body {
   position: absolute;
   -webkit-transform: translate3d(-50%, -50%, 0);
   -moz-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0); /* to the div in the center vertically */
 }
 
 #name {
@@ -50,7 +53,7 @@ body {
   margin-left: 10px;
 }
 
-.enter {
+.enter { /* enter button */
   outline: 0;
   border: 0;
   padding: 15px;
