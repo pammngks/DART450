@@ -12,6 +12,10 @@ $('.enter').click(function(){
     alert('Please confirm that you are not a robot.');
     return false;
   }
+  else {
+    alert('Yeah you are.')
+  }
+
 });
 
 });
