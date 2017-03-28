@@ -22,25 +22,32 @@ Some description of the CSS styling
 
 .login {
   background-color: #eee;
+  max-width: 400px;
   margin: 0 auto;
   padding: 20px;
   left: 50%;
   top: 50%;
   position: absolute;
   -webkit-transform: translate3d(-50%, -50%, 0);
-   -moz-transform: translate3d(-50%, -50%, 0);
-   transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
 }
-.login input {
-  display: block;
-  width: 100%;
+
+#name {
   font-size: 14px;
   padding: 15px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#check, .login label {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
 }
 
 .login label {
-  font-size: 14px;
-  padding: 15px;
+  margin-left: 10px;
 }
 
 .enter {
