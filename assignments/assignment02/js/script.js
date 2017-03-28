@@ -13,9 +13,10 @@ $('.enter').click(function(){
     return false;
   }
   else {
-    alert('Yeah you are.')
+    alert('Yeah you are.');
   }
-
 });
+
+
 
 });
