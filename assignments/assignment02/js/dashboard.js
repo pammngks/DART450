@@ -19,8 +19,8 @@ $('#add').click(function(){
 var pageCount = 0;
 $(document).click(function(){
   pageCount++;
-  if (pageCount > 5){
-    document.body.style.background = 'black';
+  if (pageCount > 10){
+    $('body').addClass("glitch");
   }
 });
 
