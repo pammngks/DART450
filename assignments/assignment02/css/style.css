@@ -171,3 +171,13 @@ ul li {
   bottom: 0px;
   left: 0px;
 }
+
+/* Glitch effect */
+.glitch {
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position: absolute;
+  display: none;
+}
