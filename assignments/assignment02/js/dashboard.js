@@ -7,10 +7,15 @@ Pam Menegakis
 
 $(document).ready(function() {
 
+var counter = 0;
+var toAdd = $('input[name=listItem]').val();
+
 $('#add').click(function(){
-  var toAdd = $('input[name=listItem]').val();
   $('ul').append('<li>' + toAdd + '</li>'); //adds input to list
+  counter++;
+  $('.counter').text(counter);
 });
+
 
 
 });
