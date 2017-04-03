@@ -12,11 +12,11 @@ $('.enter').click(function (){
     alert('Please confirm that you are not a robot.');
     return false;
   }
-  else {
-    window.location= "./web/main.html";
-  }
 
-  if ($('#name').val().length === 0) {
+  if ($('#name').val().length > 1) {
+    window.location = "./web/main.html"
+  }
+  else {
     alert("Don't you have a name?");
   }
 });
