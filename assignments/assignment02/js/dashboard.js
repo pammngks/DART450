@@ -27,9 +27,15 @@ $('#taskList').click(function(){
   var pageCount = 0;
   $(document).click(function(){
     pageCount++;
-    if (pageCount > 10){
+
+    if (pageCount > 30){
       $('body').addClass("glitch");
     }
+
+    if (pageCount > 10) {
+      $('div').draggable();
+    }
+
   });
 
 // Function: Display a greeting to the user based upon the current time
