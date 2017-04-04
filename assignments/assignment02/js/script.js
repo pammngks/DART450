@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 $('.enter').click(function (){
   if (!$('#check').is(':checked')){
-    alert('Please confirm that you are not a robot.');
+    alert('Please confirm that you are a robot.');
     return false;
   }
 
