@@ -10,6 +10,11 @@ $(document).ready(function() {
 // Displays a greeting to the user based upon the current time
 userGreeting();
 
+// Load the data that will be used later on
+$.getJSON('../data/data.json', gotData);
+
+});
+
 var counter = 0;
 
   $('#add').click(function(){
@@ -64,16 +69,20 @@ function  userGreeting() {
 
 }
 
+// Function: Display a random first name, last name and task count in the leaderboard section
+function gotData(data) {
+  // Get a first name
+  var firstName = getRandomElement(data.firstName);
+  // Get a last name
+  var lastName = getRandomElement(data.lastName);
+  // Get a task count
+  var taskCount = getRandomElement(data.taskCount);
 
+// Get random elements every time the page loads
+  function getRandomElement(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
 
-
-
-
-
-
-
-
-
-
-
-});
+  $('.name').text(firstName + " " + lastName);
+  $('.taskCount').text(taskCount);
+}
