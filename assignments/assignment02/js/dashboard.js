@@ -26,8 +26,9 @@ var counter = 0;
   });
 
 
-
+// Function: Keep track of the page clicks in order to destruct elements
   var pageCount = 0;
+
   $(document).click(function(){
     pageCount++;
 
@@ -35,11 +36,24 @@ var counter = 0;
       $('body').addClass("glitch");
     }
 
-    if (pageCount > 10) {
-      $('div').draggable();
-    }
+    if (pageCount > 5) {
 
+      $('div').each(function(){ // Go through each div on the page
+
+        // Select a random location anywhere within the window
+        var x = $(window).width() * Math.random();
+        var y = $(window).height() * Math.random();
+
+        // Set the current div's CSS to put it at a random location
+        $(this).css({
+         position: 'absolute',
+         top: y + 'px',
+         left: x + 'px'});
+       });
+
+      }
   });
+
 
 // Function: Display a greeting to the user based upon the current time
 
