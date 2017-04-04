@@ -1,0 +1,19 @@
+{
+  "firstName": [
+    "John",
+    "Anna",
+    "Peter"
+  ],
+
+  "lastName": [
+    "Smith",
+    "Doe",
+    "Jones"
+  ],
+
+  "taskCount":[
+    "5",
+    "100",
+    "35"
+  ]
+}
