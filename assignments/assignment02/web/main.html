@@ -1,6 +1,8 @@
 <!-- ************************************************************************
 
 Assignment 02: Web Intervention
+This page acts as the user's dashboard. The dashboard includes various sections in which the user could keep track of the tasks they need to complete, while also being able to challenge their friends and keep track of their progress.
+
 Pam Menegakis
 
 ************************************************************************ -->
@@ -13,7 +15,7 @@ Pam Menegakis
 
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <title>Your Dashboard</title>
+  <title>My Dashboard</title>
 
   <link rel="stylesheet" type="text/css" href="../css/style.css" />
 
@@ -29,19 +31,22 @@ Pam Menegakis
 
 </head>
 
-<!-- Creating a form for the user in which they will put their name and check a box in order to proceed to the homepage -->
 
 <body>
 
+<!-- HEADER: Time based greeting and amount of tasks to complete -->
 <div id="header">
   <div id="hello"></div>
   <div class="counter">0 tasks to complete</div>
 </div>
 
+<!-- CONTAINER: Wraps around each section -->
 <div id="container">
 
+  <!-- SECTION 1: User's progress of tasks that are left to do and tasks that have already been completed -->
   <div id="progress">progress</div>
 
+  <!-- SECTION 2: User's task list which allows them to add a task and remove it when completed -->
   <div id="taskList">
     <form name="toDoList">
       <input type="text" name="listItem" placeholder="What do you need to do?"/>
@@ -49,15 +54,18 @@ Pam Menegakis
 
     <div id="add">Add</div>
     <br></br>
+    <!-- Elements will be added to a list with external scripts -->
     <ul></ul>
   </div>
 
-<div id="challenge">challenge</div>
+  <!-- SECTION 3: The user is able to challenge friends and compete with them in order to see who could complete the most tasks -->
+  <div id="challenge">challenge</div>
 
-<div id="leaderboard">
-  <h1>Leaderboard</h1>
-  <p class="name"></p> <p class="taskCount"></p>
-</div>
+  <!-- SECTION 4: A leaderboard of the user's friends ranking them based on productivity levels -->
+  <div id="leaderboard">
+    <h1>Leaderboard</h1>
+    <p class="name"></p> <p class="taskCount"></p>
+  </div>
 
 
 
