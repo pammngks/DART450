@@ -14,6 +14,7 @@ Some description of the CSS styling
 * {
   border: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -66,7 +67,7 @@ body {
 
 /*
 
-DASHBOARD
+DASHBOARD HEADER
 
 */
 
@@ -98,26 +99,33 @@ margin-bottom: 10px;
   text-align: right;
 }
 
-/* Dashboard container */
+/* DASHBOARD CONTAINER ELEMENTS */
 #container {
   position: relative;
   width: 100%;
-  display: inline-block;
+  display: -webkit-flex;
+  display: flex;
+  align-items: -webkit-flex-start; /* Position items at the top of the container */
+  align-items: flex-start;
+  -webkit-flex-wrap: wrap; /* If necessary, wrap items */
+  flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+  align-content: flex-start;
+  padding: 30px;
 }
 
 /* Task List */
-
 #taskList {
   padding: 20px;
-  width: 50%;
-  margin: 0 auto;
+  width: 600px;
   background-color: #EFEFEF;
   border-radius: 2px;
+  margin: 10px;
 }
 
 #taskList form {
   display: inline-block;
-  width: 90%;
+  width: 500px;
 }
 
 #taskList input {
@@ -157,6 +165,26 @@ ul li {
 
 .strike {
   text-decoration: line-through;
+}
+
+/* Challenge container */
+#challenge {
+  padding: 20px;
+  width: 500px;
+  background-color: #EFEFEF;
+  border-radius: 2px;
+  height: 250px;
+  margin: 10px;
+}
+
+/* Leaderboard container */
+#leaderboard {
+  padding: 20px;
+  width: 300px;
+  background-color: #EFEFEF;
+  border-radius: 2px;
+  height: 250px;
+  margin: 10px;
 }
 
 /* Progress Bar */
