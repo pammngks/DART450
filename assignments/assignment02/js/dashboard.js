@@ -14,7 +14,7 @@ var counter = 0;
 
   $('#add').click(function(){
     var toAdd = $('input[name=listItem]').val();
-    $('ul').append('<li>' + toAdd + '</li>'); //adds input to list
+    $('ul').append('<li>' + toAdd + '</li>'); //Adds input to list
     counter++;
     $('.counter').text(counter);
   });
