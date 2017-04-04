@@ -16,13 +16,11 @@ var counter = 0;
     var toAdd = $('input[name=listItem]').val();
     $('ul').append('<li>' + toAdd + '</li>'); //Adds input to list
     counter++;
-    $('.counter').text(counter);
+    $('.counter').text(counter + ' tasks to complete');
+
   });
 
-$('#taskList').click(function(){
-  $('ul').append('<li' + toAdd + '</li>');
-  counter++;
-});
+
 
   var pageCount = 0;
   $(document).click(function(){
@@ -62,7 +60,7 @@ function  userGreeting() {
     greeting = 'Welcome';
   }
 
-  document.getElementById('header').innerHTML = greeting; // Write the greeting in the header
+  document.getElementById('hello').innerHTML = greeting; // Write the greeting in the header
 
 }
 
