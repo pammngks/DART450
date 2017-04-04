@@ -105,13 +105,9 @@ margin-bottom: 10px;
   width: 100%;
   display: -webkit-flex;
   display: flex;
-  align-items: -webkit-flex-start; /* Position items at the top of the container */
-  align-items: flex-start;
   -webkit-flex-wrap: wrap; /* If necessary, wrap items */
   flex-wrap: wrap;
-  -webkit-align-content: flex-start;
-  align-content: flex-start;
-  padding: 30px;
+  padding: 20px;
 }
 
 /* Task List */
@@ -187,15 +183,29 @@ ul li {
   margin: 10px;
 }
 
-/* Progress Bar */
-#progressBar {
-  height: 50px;
-  background-color: white;
+#leaderboard h1 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.name, .taskCount {
   font-size: 14px;
-  width: 100%;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
+  display: inline-block;
+}
+
+.taskCount {
+  float: right;
+}
+
+/* Progress Bar */
+#progress {
+  padding: 20px;
+  width: 600px;
+  height: 50px;
+  background-color: #EFEFEF;
+  border-radius: 2px;
+  height: 100px;
+  margin: 10px;
 }
 
 /* Glitch effect */
