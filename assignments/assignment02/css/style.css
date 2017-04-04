@@ -73,17 +73,29 @@ DASHBOARD
 /* Header */
 
 #header {
-  background-color: white;
-  width: 100vw;
-  height: 50px;
-  padding: 10px;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  text-align: center;
+height: 50px;
+background-color: white;
+color: black;
+width: 100%;
+display: -webkit-flex;
+display: flex;
+padding: 10px;
 }
 
-#header p {
-  font-size: 14px;
+/* Greeting */
+.hello {
+  color: #374954;
+  text-align: left;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+/* Task counter */
+.counter {
+  color: #374954;
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: right;
 }
 
 /* Dashboard container */
@@ -93,20 +105,6 @@ DASHBOARD
   display: inline-block;
 }
 
-/* Task counter */
-.counter {
-  background-color: white;
-  border-radius: 5px;
-  width: 100px;
-  height: 100px;
-  vertical-align: middle;
-  font-size: 50px;
-  margin: 1.5%;
-  text-align: center;
-  float: right;
-  line-height: 100px;
-  color: #374954;
-}
 
 /* Task List */
 
