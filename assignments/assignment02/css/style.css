@@ -19,7 +19,7 @@ Some description of the CSS styling
 }
 
 body {
-  background-color: #374954;
+  background-color: rgb(46,52,87);
 }
 
 /* styling for the login form */
@@ -74,8 +74,7 @@ DASHBOARD
 
 #header {
 height: 50px;
-background-color: white;
-color: black;
+background-color: rgb(46,52,87);
 width: 100%;
 display: -webkit-flex;
 display: flex;
@@ -84,8 +83,8 @@ margin-bottom: 10px;
 }
 
 /* Greeting */
-.hello {
-  color: #374954;
+#hello {
+  color: #fff;
   text-align: left;
   -webkit-flex: 1;
   flex: 1;
@@ -93,7 +92,7 @@ margin-bottom: 10px;
 
 /* Task counter */
 .counter {
-  color: #374954;
+  color: #fff;
   -webkit-flex: 1;
   flex: 1;
   text-align: right;
@@ -112,7 +111,7 @@ margin-bottom: 10px;
   padding: 20px;
   width: 50%;
   margin: 0 auto;
-  background-color: white;
+  background-color: #EFEFEF;
   border-radius: 2px;
 }
 
@@ -122,8 +121,8 @@ margin-bottom: 10px;
 }
 
 #taskList input {
-  padding: 4px 15px 4px 15px;
-  height: 35px;
+  padding: 15px;
+  height: 20px;
   width: 100%;
   outline: none;
   font-size: 14px;
@@ -133,11 +132,11 @@ margin-bottom: 10px;
 
 #add {
   display: inline-block;
+  background-color: rgb(213,213,213);
   text-align: center;
-  margin-top: 2px;
   padding: 5px 15px;
-  height: 25px;
-  float: right;
+  font-size: 14px;
+  margin-left: 2px;
 }
 
 #add:hover {
