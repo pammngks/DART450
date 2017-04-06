@@ -11,6 +11,10 @@ $(document).ready(function() {
 
 // Displays a greeting to the user based upon the current time
 userGreeting();
+// Keeps count of the tasks a user adds to the list
+taskList();
+// Glitches the page as the user interacts with it more
+pageGlitch();
 
 // Load the data that will be used later on
 $.getJSON('../data/data.json', gotData);
@@ -19,6 +23,7 @@ $.getJSON('../data/data.json', gotData);
 
 // FUNCTION: Keep count of the tasks a user adds to the list with a counter
 
+function  taskList() {
 // Set initial count to 0
 var counter = 0;
 
@@ -32,12 +37,13 @@ var counter = 0;
     counter++;
     // Display the counter in the header, followed by text
     $('.counter').text(counter + ' tasks to complete');
-
   });
+
+};
 
 
 // FUNCTION: Keep track of the page clicks in order to destruct elements
-
+function pageGlitch() {
 // Set initial count to 0
   var pageCount = 0;
 // Run the function every time the user clicks anywhere in the page
@@ -50,7 +56,7 @@ var counter = 0;
       $('body').addClass("glitch");
     }
 
-    if (pageCount > 5) {
+    if (pageCount > 10) {
       // Go through each div on the page
       $('div').each(function(){
         // Select a random location anywhere within the window
@@ -62,10 +68,9 @@ var counter = 0;
          top: y + 'px',
          left: x + 'px'});
        });
-
-      }
+     };
   });
-
+};
 
 // FUNCTION: Display a greeting to the user based upon the current time
 
@@ -95,7 +100,7 @@ function  userGreeting() {
   // Write the greeting in the header
   document.getElementById('hello').innerHTML = greeting;
 
-}
+};
 
 // FUNCTION: Display a random person and task count in the leaderboard section
 
@@ -115,4 +120,4 @@ function gotData(data) {
   // Display the variables above in the leaderboard
   $('.name').text(firstName + " " + lastName);
   $('.taskCount').text(taskCount);
-}
+};
