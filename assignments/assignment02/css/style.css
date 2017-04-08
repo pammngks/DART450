@@ -150,7 +150,6 @@ margin-bottom: 10px;
 ul {
   padding-left: 20px;
   font-size: 14px;
-  list-style-type: circle;
   color: black;
 }
 
@@ -212,7 +211,7 @@ ul li {
 
 
 /* Progress Bar */
-#progress {
+#progressBar {
   padding: 20px;
   width: 600px;
   height: 50px;
