@@ -19,11 +19,12 @@ pageGlitch();
 // Load the data that will be used later on
 $.getJSON('../data/data.json', gotData);
 
+
 });
 
 // FUNCTION: Keep count of the tasks a user adds to the list with a counter
 
-function  taskList() {
+function taskList() {
 // Set initial count to 0
 var counter = 0;
 
@@ -130,11 +131,18 @@ function gotData(data) {
   $('.points3').text(task3);
   $('.points4').text(task4);
 
+  console.log('leaderboard has loaded');
+
 
   // Get random elements every time the page loads
   function getRandomElement(array) {
   return array[Math.floor(Math.random() * array.length)];
-}
+
+};
+
+// FUNCTION:
+
+
 
 
 };
