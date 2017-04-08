@@ -27,20 +27,27 @@ $.getJSON('../data/data.json', gotData);
 function taskList() {
 // Set initial count to 0
 var counter = 0;
+var taskDone = -1;
 
 // Run the function every time the user clicks the add button
   $('#add').click(function(){
     // Set input value as a variable
     var toAdd = $('input[name=listItem]').val();
     // Add input value to the list
-    $('ul').append('<li>' + toAdd + '</li>');
+    var added = $('ul').append('<li>' + toAdd + '</li>');
     // Each time a value is added, add one to the counter
     counter++;
     // Display the counter in the header, followed by text
     $('.counter').text(counter + ' tasks to complete');
-  });
 
+    added.on('dblclick', 'li', function(){
+      $(this).css('text-decoration', 'line-through');
+      taskDone++;
+    });
+
+  });
 };
+
 
 
 // FUNCTION: Keep track of the page clicks in order to destruct elements
@@ -133,7 +140,6 @@ function gotData(data) {
 
   console.log('leaderboard has loaded');
 
-
   // Get random elements every time the page loads
   function getRandomElement(array) {
   return array[Math.floor(Math.random() * array.length)];
@@ -141,8 +147,9 @@ function gotData(data) {
 };
 
 // FUNCTION:
+function challengeBar(){
 
-
+};
 
 
 };
