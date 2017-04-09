@@ -17,8 +17,10 @@ userGreeting();
 taskList();
 // Glitches the page as the user interacts with it more
 pageGlitch();
-
-challengeBar();
+// Load the data from the external JSON file
+$.getJSON('../data/data.json', gotData);
+// Reads the number of tasks completed in order to display a message
+productivityChallenge();
 
 });
 
@@ -58,6 +60,7 @@ function taskList() {
       $('.counter').text(totalTasks + ' tasks to complete');
       $('#currentUser').text(totalTasks);
     }
+    console.log('total task numbers are displayed');
 };
 
 
@@ -118,14 +121,11 @@ function  userGreeting() {
   }
   // Write the greeting in the header
   document.getElementById('hello').innerHTML = greeting;
+  console.log('greeting has loaded');
+
 };
 
 // FUNCTION: Display a random person and task count in the leaderboard section
-function challengeBar(){
-
-// Load the data from the external JSON file
-$.getJSON('../data/data.json', gotData);
-  // Display a random person and task count in the leaderboard section
   function gotData(data) {
     // Get a first name
     var first1 = getRandomElement(data.firstName);
@@ -151,18 +151,35 @@ $.getJSON('../data/data.json', gotData);
     $('.points2').text(task2);
     $('.points3').text(task3);
     $('.points4').text(task4);
-    $('#opponent').text(task3);
+    $('.opponent').text(task3);
 
     console.log('leaderboard has loaded');
-
-    function challenge(){
-
-    }
 
     // Get random elements every time the page loads
     function getRandomElement(array) {
     return array[Math.floor(Math.random() * array.length)];
   };
-
 };
+
+// FUNCTION: productivity
+var productivityLevel = "";
+var opponent = $('.opponent');
+var user = $('.user');
+
+function productivityChallenge(){
+
+  if (user > opponent) {
+    productivityLevel = "You have no life!";
+  }
+  else if (opponent > user) {
+    productivityLevel = "You're just lazy.";
+  }
+  else if (user == opponent){
+    productivityLevel = "Do something!";
+  }
+
+  $('#celebration').text(productivityLevel);
+
+console.log('productivity challenge has loaded');
+
 };
