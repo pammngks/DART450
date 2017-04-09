@@ -26,41 +26,47 @@ $.getJSON('../data/data.json', gotData);
 
 // FUNCTION: Add items to a list and keep count of the amount of tasks
 function taskList() {
-// Run the function every time the user clicks the add button
+
+  // Add a task to the list every time the add button is triggered
   $('#add').click(function(){
-    // Set input value as a variable
+    // Set the input value as a variable
     var toAdd = $('input[name=listItem]').val();
-    // Add input value to the list
-    var added = $('ol').append('<li>' + toAdd + '</li>');
-    // Clear the input field
-    $('input[name=listItem]').val('');
-    // Each time a value is added, update the total
-    updateTotal();
-    // If input is blank, prompt an alert
+    // If the input is empty, prompt an alert
     if (toAdd === ""){
       alert ("Don't you have things to do?");
     }
-    // Add strikethrough if task is double clicked
+    // If input is not empty, add the task to the list
+    else {
+    var added = $('ol').append('<li>' + toAdd + '</li>');
+  }
+    // Clear the input field every time the add button is triggered
+    $('input[name=listItem]').val('');
+    // Update the total amount of tasks each time an input is added to the list
+    updateTotal();
+});
+
+    // Toggle a class when the list item is clicked. The class being toggled is a line-through text effect in order to indicate if the task has been completed.
     $('.task').on('click', 'li', function(){
       $(this).toggleClass('done');
+      // Update the total amount of tasks each time the list item is clicked
       updateTotal();
     });
-    // Function to keep track of the total of tasks
+
+    // Keep track of the amount of tasks left to complete
     function updateTotal(){
-      // Get the total number of Todos minus the number of Todos marked with the class 'done'
-      var totalTodos = $('.task li').not('.done').length;
+      // Get the total number of tasks minus the number of tasks marked with the class 'done'
+      var totalTasks = $('.task li').not('.done').length;
       // Update the total in the header of web page
-      $('.counter').html(totalTodos + ' tasks to complete');
+      $('.counter').html(totalTasks + ' tasks to complete');
     }
-  });
 };
 
 
 // FUNCTION: Keep track of the page clicks in order to destruct elements
 function pageGlitch() {
-// Set initial count to 0
+  // Set initial count to 0
   var pageCount = 0;
-// Run the function every time the user clicks anywhere in the page
+  // Run the function every time the user clicks anywhere in the page
   $(document).click(function(){
     // Each time a click is generated, add it to the count
     pageCount++;
@@ -113,7 +119,6 @@ function  userGreeting() {
   }
   // Write the greeting in the header
   document.getElementById('hello').innerHTML = greeting;
-
 };
 
 // FUNCTION: Display a random person and task count in the leaderboard section
