@@ -18,9 +18,7 @@ taskList();
 // Glitches the page as the user interacts with it more
 pageGlitch();
 
-// Load the data that will be used later on
-$.getJSON('../data/data.json', gotData);
-
+challengeBar();
 
 });
 
@@ -57,7 +55,8 @@ function taskList() {
       // Get the total number of tasks minus the number of tasks marked with the class 'done'
       var totalTasks = $('.task li').not('.done').length;
       // Update the total in the header of web page
-      $('.counter').html(totalTasks + ' tasks to complete');
+      $('.counter').text(totalTasks + ' tasks to complete');
+      $('#currentUser').text(totalTasks);
     }
 };
 
@@ -122,45 +121,48 @@ function  userGreeting() {
 };
 
 // FUNCTION: Display a random person and task count in the leaderboard section
-
-function gotData(data) {
-  // Get a first name
-  var first1 = getRandomElement(data.firstName);
-  var first2 = getRandomElement(data.firstName);
-  var first3 = getRandomElement(data.firstName);
-  var first4 = getRandomElement(data.firstName);
-  // Get a last name
-  var last1 = getRandomElement(data.lastName);
-  var last2 = getRandomElement(data.lastName);
-  var last3 = getRandomElement(data.lastName);
-  var last4 = getRandomElement(data.lastName);
-  // Get a task count
-  var task1 = getRandomElement(data.taskCount);
-  var task2 = getRandomElement(data.taskCount);
-  var task3 = getRandomElement(data.taskCount);
-  var task4 = getRandomElement(data.taskCount);
-
-  $('.user1').text(first1 + " " + last1);
-  $('.user2').text(first2 + " " + last2);
-  $('.user3').text(first3 + " " + last3);
-  $('.user4').text(first4 + " " + last4);
-  $('.points1').text(task1);
-  $('.points2').text(task2);
-  $('.points3').text(task3);
-  $('.points4').text(task4);
-
-  console.log('leaderboard has loaded');
-
-  // Get random elements every time the page loads
-  function getRandomElement(array) {
-  return array[Math.floor(Math.random() * array.length)];
-
-};
-
-// FUNCTION:
 function challengeBar(){
 
+// Load the data from the external JSON file
+$.getJSON('../data/data.json', gotData);
+  // Display a random person and task count in the leaderboard section
+  function gotData(data) {
+    // Get a first name
+    var first1 = getRandomElement(data.firstName);
+    var first2 = getRandomElement(data.firstName);
+    var first3 = getRandomElement(data.firstName);
+    var first4 = getRandomElement(data.firstName);
+    // Get a last name
+    var last1 = getRandomElement(data.lastName);
+    var last2 = getRandomElement(data.lastName);
+    var last3 = getRandomElement(data.lastName);
+    var last4 = getRandomElement(data.lastName);
+    // Get a task count
+    var task1 = getRandomElement(data.taskCount);
+    var task2 = getRandomElement(data.taskCount);
+    var task3 = getRandomElement(data.taskCount);
+    var task4 = getRandomElement(data.taskCount);
+
+    $('.user1').text(first1 + " " + last1);
+    $('.user2').text(first2 + " " + last2);
+    $('.user3').text(first3 + " " + last3);
+    $('.user4').text(first4 + " " + last4);
+    $('.points1').text(task1);
+    $('.points2').text(task2);
+    $('.points3').text(task3);
+    $('.points4').text(task4);
+    $('#opponent').text(task3);
+
+    console.log('leaderboard has loaded');
+
+    function challenge(){
+
+    }
+
+    // Get random elements every time the page loads
+    function getRandomElement(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  };
+
 };
-
-
 };
