@@ -174,9 +174,9 @@ ol li {
   margin: 10px;
 }
 
-#challenge h1, #currenUser, #opponent {
-  display: inline-block;
-  margin-right: 20px;
+#challenge h1 {
+  font-size: 20px;
+  background-color: lightblue;
 }
 
 #celebration {
