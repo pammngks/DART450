@@ -9,6 +9,8 @@ Pam Menegakis
 
 $(document).ready(function() {
 
+// Disable text selection on the entire web page
+$("body").disableSelection();
 // Displays a greeting to the user based upon the current time
 userGreeting();
 // Keeps count of the tasks a user adds to the list
@@ -22,32 +24,36 @@ $.getJSON('../data/data.json', gotData);
 
 });
 
-// FUNCTION: Keep count of the tasks a user adds to the list with a counter
-
+// FUNCTION: Add items to a list and keep count of the amount of tasks
 function taskList() {
-// Set initial count to 0
-var counter = 0;
-var taskDone = -1;
-
 // Run the function every time the user clicks the add button
   $('#add').click(function(){
     // Set input value as a variable
     var toAdd = $('input[name=listItem]').val();
     // Add input value to the list
-    var added = $('ul').append('<li>' + toAdd + '</li>');
-    // Each time a value is added, add one to the counter
-    counter++;
-    // Display the counter in the header, followed by text
-    $('.counter').text(counter + ' tasks to complete');
-
-    added.on('dblclick', 'li', function(){
-      $(this).css('text-decoration', 'line-through');
-      taskDone++;
+    var added = $('ol').append('<li>' + toAdd + '</li>');
+    // Clear the input field
+    $('input[name=listItem]').val('');
+    // Each time a value is added, update the total
+    updateTotal();
+    // If input is blank, prompt an alert
+    if (toAdd === ""){
+      alert ("Don't you have things to do?");
+    }
+    // Add strikethrough if task is double clicked
+    $('.task').on('click', 'li', function(){
+      $(this).toggleClass('done');
+      updateTotal();
     });
-
+    // Function to keep track of the total of tasks
+    function updateTotal(){
+      // Get the total number of Todos minus the number of Todos marked with the class 'done'
+      var totalTodos = $('.task li').not('.done').length;
+      // Update the total in the header of web page
+      $('.counter').html(totalTodos + ' tasks to complete');
+    }
   });
 };
-
 
 
 // FUNCTION: Keep track of the page clicks in order to destruct elements
@@ -59,12 +65,12 @@ function pageGlitch() {
     // Each time a click is generated, add it to the count
     pageCount++;
     // Various if statements to render the page 'difficult' to use
-    if (pageCount > 30){
+    if (pageCount > 60){
       // Expose a class that will glitch the entire web page with external css styling
       $('body').addClass("glitch");
     }
 
-    if (pageCount > 10) {
+    if (pageCount > 50) {
       // Go through each div on the page
       $('div').each(function(){
         // Select a random location anywhere within the window
