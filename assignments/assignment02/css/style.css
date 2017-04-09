@@ -147,18 +147,21 @@ margin-bottom: 10px;
   opacity: 0.8;
 }
 
-ul {
+ol {
   padding-left: 20px;
-  font-size: 14px;
+  font-size: 16px;
   color: black;
 }
 
-ul li {
+ol li {
   padding: 5px;
+  cursor: pointer;
 }
 
-.strike {
+/* This class will be toggled once the list items are clicked */
+.done {
   text-decoration: line-through;
+  opacity: 0.2;
 }
 
 /* Challenge container */
