@@ -28,7 +28,9 @@ Pam Menegakis
 
   <!-- We include our own script file(s) -->
   <script src="../js/dashboard.js" content="text/javascript"></script>
-    <script src="../js/leaderboard.js" content="text/javascript"></script>
+  <script src="../js/leaderboard.js" content="text/javascript"></script>
+  <!-- Responsive Voice Library -->
+  <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 
 </head>
 
@@ -65,16 +67,16 @@ Pam Menegakis
     <p id="celebration"></p>
   </div>
 
-  <!-- SECTION 3: The user is able to challenge friends and compete with them in order to see who could complete the most tasks -->
-  <div id="challenge">
-    <h2>Tasks completed today:</h2>
-    <!-- Current user -->
-    <h1>You</h1>
-    <p id="currentUser" class="user">0</p>
-    <!-- Opponent -->
-    <h1 class="user3"></h1>
-    <p class="opponent"></p>
-  </div>
+  <div id="calendar">
+  <table>
+    <h1>April</h1>
+    <tr><td class="lastmonth">26</td><td class="lastmonth">27</td><td class="lastmonth">28</td><td class="lastmonth">29</td><td class="hastask lastmonth">30</td><td class="lastmonth">31</td><td>1</td></tr>
+    <tr><td>2</td><td class="hastask">3</td><td class="hastask">4</td><td>5</td><td>6</td><td class="hastask">7</td><td>8</td></tr>
+    <tr><td>9</td><td class="hastask">10</td><td class="current">11</td><td>12</td><td class="hastask">13</td><td>14</td><td>15</td></tr>
+    <tr><td class="hastask">16</td><td>17</td><td class="hastask">18</td><td>19</td><td class="hastask">20</td><td class="hastask">21</td><td>22</td></tr>
+    <tr><td>23</td><td>24</td><td class="hastask">25</td><td class="hastask">26</td><td>27</td><td>28</td><td>29</td></tr>
+  </table>
+</div>
 
   <!-- SECTION 4: A leaderboard of the user's friends ranking them based on productivity levels -->
   <div id="leaderboard">
@@ -85,19 +87,40 @@ Pam Menegakis
       <p class="user2"></p>
       <p class="user3"></p>
       <p class="user4"></p>
+      <h2 class="highlight">You</h2>
     </div>
     <div id="points">
       <h2>Tasks Completed</h2>
-      <p class=points1></p>
-      <p class=points2></p>
-      <p class=points3></p>
-      <p class=points4></p>
+      <p class="points1"></p>
+      <p class="points2"></p>
+      <p class="points3"></p>
+      <p class="points4"></p>
+      <p class="user highlight">0</p>
     </div>
   </div>
 
 
 
 </div>
+
+<!-- SECTION 3: The user is able to challenge friends and compete with them in order to see who could complete the most tasks -->
+<div id="challenge">
+  <!-- Current user -->
+  <div class="profile left"><img class="image" src="../images/user.jpg"></div>
+  <div id="userChallenge">
+    <h1>You</h1>
+    <p id="currentUser" class="user">0</p>
+  </div>
+  <!-- Opponent -->
+  <div class="profile right"></div>
+  <div id="opponentChallenge">
+    <h1 class="user3"></h1>
+    <p class="opponent"></p>
+</div>
+</div>
+
+<audio id="success" src="../audio/success.mp3"></audio>
+<audio id="failure" src="../audio/failure.mp3"></audio>
 
 </body>
 </html>
