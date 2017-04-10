@@ -28,6 +28,7 @@ Pam Menegakis
 
   <!-- We include our own script file(s) -->
   <script src="../js/dashboard.js" content="text/javascript"></script>
+    <script src="../js/leaderboard.js" content="text/javascript"></script>
 
 </head>
 
@@ -43,12 +44,7 @@ Pam Menegakis
 <!-- CONTAINER: Wraps around each section -->
 <div id="container">
 
-  <!-- SECTION 1: User's progress of tasks that are left to do and tasks that have already been completed -->
-  <div id="progressBar">
-
-  </div>
-
-  <!-- SECTION 2: User's task list which allows them to add a task and remove it when completed -->
+  <!-- SECTION 1: User's task list which allows them to add a task and remove it when completed -->
   <div id="taskList">
     <form name="toDoList">
       <input type="text" name="listItem" placeholder="What do you need to do?"/>
@@ -60,6 +56,15 @@ Pam Menegakis
     <ol class="task"></ol>
   </div>
 
+  <!-- SECTION 2: User's progress of tasks that are left to do and tasks that have already been completed -->
+  <div id="progressBar">
+    <p id="completed">0 completed</p>
+    <p id="toComplete">0 to complete</p>
+    <p id="percent">0%</p>
+    <!-- Progess message -->
+    <p id="celebration"></p>
+  </div>
+
   <!-- SECTION 3: The user is able to challenge friends and compete with them in order to see who could complete the most tasks -->
   <div id="challenge">
     <h2>Tasks completed today:</h2>
@@ -69,8 +74,6 @@ Pam Menegakis
     <!-- Opponent -->
     <h1 class="user3"></h1>
     <p class="opponent"></p>
-    <!-- Progess message -->
-    <p id="celebration"></p>
   </div>
 
   <!-- SECTION 4: A leaderboard of the user's friends ranking them based on productivity levels -->
@@ -92,7 +95,7 @@ Pam Menegakis
     </div>
   </div>
 
-  <div id="timer"></div>
+  <!-- <div id="timer"></div> -->
 
 
 
