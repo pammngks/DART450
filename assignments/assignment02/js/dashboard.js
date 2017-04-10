@@ -13,6 +13,8 @@ $(document).ready(function() {
 $("body").disableSelection();
 // Displays a greeting to the user based upon the current time
 userGreeting();
+// Page timer
+timer();
 // Keeps count of the tasks a user adds to the list
 taskList();
 // Glitches the page as the user interacts with it more
@@ -89,12 +91,12 @@ function pageGlitch() {
     // Each time a click is generated, add it to the count
     pageCount++;
     // Various if statements to render the page 'difficult' to use
-    if (pageCount > 60){
+    if (pageCount > 40){
       // Expose a class that will glitch the entire web page with external css styling
       $('body').addClass("glitch");
     }
 
-    if (pageCount > 50) {
+    if (pageCount == 10) {
       // Go through each div on the page
       $('div').each(function(){
         // Select a random location anywhere within the window
@@ -138,5 +140,29 @@ function  userGreeting() {
   // Write the greeting in the header
   document.getElementById('hello').innerHTML = greeting;
   console.log('greeting has loaded');
-
 };
+
+// FUNCTION
+function timer(){
+    $('#header').prepend('<p id="timer"><label id="minutes">00</label>:<label id="seconds">00</label></p>');
+         var totalSeconds = 0;
+        setInterval(setTime, 1000);
+        function setTime()
+        {
+            ++totalSeconds;
+            $('#timer > #seconds').html(pad(totalSeconds%60));
+            $('#timer > #minutes').html(pad(parseInt(totalSeconds/60)));
+        }
+        function pad(val)
+        {
+            var valString = val + "";
+            if(valString.length < 2)
+            {
+                return "0" + valString;
+            }
+            else
+            {
+                return valString;
+            }
+        }
+}
