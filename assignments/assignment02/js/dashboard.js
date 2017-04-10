@@ -72,7 +72,7 @@ function taskList() {
     // List number of tasks with the class done
     var tasksCompleted = $('.done').length;
     // Update the total in the header of web page
-    $('.counter').text(totalTasks + ' tasks to complete');
+    $('.counter').text('You have ' + totalTasks + ' tasks to complete');
     $('.user').text(tasksCompleted);
     $('#toComplete').text(totalTasks + ' to complete');
     $('#completed').text(tasksCompleted + ' completed');
@@ -196,7 +196,7 @@ function pageGlitch() {
     // Build the image element
     var img = $('<img class="image" src="' + imageSource + '">');
     // Add the chosen image to corresponding div
-    $('.right').append(img);
+    $('.random').append(img);
   }
 
   // Function that returns a random integer between min and max
