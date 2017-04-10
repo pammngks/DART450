@@ -52,7 +52,7 @@ function taskList() {
     $(this).toggleClass('done');
     // Update the total amount of tasks each time the list item is clicked
     updateTotal();
-    // Set up variables for differeny audio files
+    // Set up variables for audio files
     var success = document.getElementById('success');
     // Play audio depending on class
     if ($(this).hasClass('done')){
@@ -74,8 +74,8 @@ function taskList() {
     // Update the total in the header of web page
     $('.counter').text('You have ' + totalTasks + ' tasks to complete');
     $('.user').text(tasksCompleted);
-    $('#toComplete').text(totalTasks + ' to complete');
-    $('#completed').text(tasksCompleted + ' completed');
+    $('#toComplete').text('Incomplete: ' + totalTasks);
+    $('#completed').text('Completed: ' + tasksCompleted);
     // Create variable to hold text
     var productivityLevel = "";
     // If user completes more tasks than the total
@@ -109,12 +109,12 @@ function pageGlitch() {
     // Each time a click is generated, add it to the count
     pageCount++;
     // Various if statements to render the page 'difficult' to use
-    if (pageCount > 60){
+    if (pageCount > 5){
       // Expose a class that will glitch the entire web page with external css styling
       $('body').addClass("glitch");
     }
 
-    if (pageCount == 50) {
+    if (pageCount == 5) {
       // Go through each div on the page
       $('div').each(function(){
         // Select a random location anywhere within the window
