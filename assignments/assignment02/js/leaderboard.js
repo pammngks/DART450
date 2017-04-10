@@ -29,10 +29,24 @@ $.getJSON('../data/data.json', gotData);
     $('.points4').text(task4);
     $('.opponent').text(task3);
 
-    console.log('leaderboard has loaded');
+    console.log('Leaderboard has loaded.');
 
     // Get random elements every time the page loads
     function getRandomElement(array) {
     return array[Math.floor(Math.random() * array.length)];
   };
+
+  // Increase the opponent count by 1 every 2 minutes
+  var i = task3;
+  var interval = setInterval(increment,120000);
+  function increment(){
+    // Increase task3 by 1
+    i++;
+    // Display new number in challenge section
+    $('.opponent').text(i);
+    // Display new number in leaderboard section
+    $('.points3').text(i);
+    console.log('Opponent is being productive.');
+  }
+
 };
