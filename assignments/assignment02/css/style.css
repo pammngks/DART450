@@ -190,18 +190,35 @@ ol li {
 }
 
 #leaderboard h1 {
-  font-size: 18px;
+  font-size: 14px;
   text-align: center;
   margin-bottom: 10px;
+  font-weight:300;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:rgb(46,52,87);
 }
 
 #leaderboard h2 {
   font-size: 14px;
+  text-transform:uppercase;
+  font-weight:300;
+  color: #000;
+  opacity: 0.5;
+}
+
+#leaderboard h3 {
+  color: #000;
+  font-size: 14px;
+  text-transform:uppercase;
+  padding: 0px 5px;
 }
 
 #leaderboard p {
   font-size: 14px;
   display: block;
+  color: #000;
+  padding: 0px 5px;
 }
 
 #userName {
@@ -216,7 +233,7 @@ ol li {
 }
 
 .highlight {
-  background-color: yellow;
+  background-color: #dddddd;
 }
 
 /* Progress Bar */
@@ -228,11 +245,23 @@ ol li {
   height: 150px;
   margin: 10px;
   order: 3;
+  font-weight:300;
+  font-size: 14px;
+}
+
+#progressBar h1 {
+  font-size: 14px;
+  text-align: center;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:rgb(46,52,87);
+  font-weight:300;
 }
 
 #celebration {
   font-size: 30px;
   text-align: center;
+  font-weight:300;
 }
 
 /* Calendar */
@@ -240,24 +269,21 @@ ol li {
   width: 250px;
   margin:10px;
   border-radius:5px;
-  font-family:'Open Sans',sans-serif;
   text-align:center;
-  color:#555;
-  box-shadow:0 0 50px -14px rgba(0,0,0,.8);
   order: 4;
 }
 
 #calendar h1{
-  background:#ee3333;
-  border-radius:5px 5px 0 0;
+  background:white;
+  border-radius:2px 2px 0 0;
   padding:20px;
   font-size:14px;
   font-weight:300;
   text-transform:uppercase;
   letter-spacing:1px;
-  color:#fff;
+  color:rgb(46,52,87);
   cursor:default;
-  text-shadow:0 0 10px rgba(0,0,0,.8);
+  cursor: pointer;
 }
 
 #calendar table{
@@ -289,10 +315,9 @@ ol li {
 }
 
 #calendar .current{
-  background:#ee3333;
+  background:rgb(46,52,87);
   font-weight:700;
   color:#fff;
-  text-shadow:0 0 10px rgba(0,0,0,.5);
 }
 
 #calendar .hastask{
