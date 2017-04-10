@@ -51,16 +51,17 @@ function taskList() {
     // Update the total amount of tasks each time the list item is clicked
     updateTotal();
     // Set up variables for differeny audio files
-    var failure = document.getElementById('failure');
     var success = document.getElementById('success');
     // Play audio depending on class
     if ($(this).hasClass('done')){
       success.play();
     }
-    else {
-      failure.play();
-    }
   });
+
+  $('.task').on('dblclick', 'li', function(){
+    $(this).fadeOut('slow');
+  });
+
 
   // Keep track of the amount of tasks left to complete
   function updateTotal(){
