@@ -23,6 +23,8 @@ $(document).ready(function() {
   userProfiles();
   // Use responsiveVoice library in order to speak on mouseover
   voiceOver();
+  // Pop up
+  popUp();
 });
 
 // FUNCTION: Add items to a list and keep count of the amount of tasks
@@ -213,5 +215,23 @@ function pageGlitch() {
     });
     $('.month').mouseover(function (){
       responsiveVoice.speak("Looks like a busy month.", "US English Male");
+    });
+  }
+
+  // FUNCTION: Pop up
+  function popUp(){
+    var div = $('.popUp');
+    var interval = 2000;
+
+    setInterval(function(){
+      $(div).fadeIn();
+      console.log('Asking user to accept challenge.');
+    }, interval);
+
+    $('.acceptBtn').click(function(){
+      $(div).fadeOut();
+      $(div).remove();
+      $('.accepted').fadeIn();
+      console.log('Challenge has been accepted');
     });
   }
