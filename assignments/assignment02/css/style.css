@@ -80,6 +80,9 @@ display: -webkit-flex;
 display: flex;
 padding: 10px 20px 0px 20px;
 margin-bottom: 10px;
+font-size:14px;
+letter-spacing: 1px;
+text-transform:uppercase;
 }
 
 /* Greeting */
@@ -149,6 +152,7 @@ margin-bottom: 10px;
   display: inline-block;
   background-color: rgb(213,213,213);
   text-align: center;
+  text-transform: uppercase;
   padding: 5px 15px;
   font-size: 14px;
   margin-left: 2px;
@@ -233,7 +237,7 @@ ol li {
 }
 
 .highlight {
-  background-color: #dddddd;
+  background-color: rgb(213,213,213);
 }
 
 /* Progress Bar */
