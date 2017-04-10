@@ -109,12 +109,17 @@ function pageGlitch() {
     // Each time a click is generated, add it to the count
     pageCount++;
     // Various if statements to render the page 'difficult' to use
-    if (pageCount > 5){
-      // Expose a class that will glitch the entire web page with external css styling
-      $('body').addClass("glitch");
+    if (pageCount == 50){
+      // Expose a class that will turn the page black with external css styling
+      $('body').addClass('glitch');
     }
 
-    if (pageCount == 5) {
+    if (pageCount == 15){
+        // Expose a class that will shake each div element
+        $('div').addClass('shake');
+    }
+
+    if (pageCount == 20) {
       // Go through each div on the page
       $('div').each(function(){
         // Select a random location anywhere within the window
@@ -125,7 +130,9 @@ function pageGlitch() {
           position: 'absolute',
           top: y + 'px',
           left: x + 'px'});
+          $(this).removeClass('shake');
         });
+
       };
     });
   };
