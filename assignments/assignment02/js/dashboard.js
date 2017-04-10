@@ -210,4 +210,7 @@ function pageGlitch() {
     $('.hastask').mouseover(function (){
       responsiveVoice.speak("Busy", "US English Male");
     });
+    $('.month').mouseover(function (){
+      responsiveVoice.speak("Looks like a busy month.", "US English Male");
+    });
   }
