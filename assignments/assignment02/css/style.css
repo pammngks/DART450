@@ -262,6 +262,11 @@ ol li {
   font-weight:300;
 }
 
+#progressBar p {
+  text-transform:uppercase;
+  font-size: 18px;
+}
+
 #celebration {
   font-size: 30px;
   text-align: center;
