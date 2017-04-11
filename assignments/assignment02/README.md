@@ -8,19 +8,24 @@ The web can be used as a way to organize our thoughts. This is evident through t
 ### Login Page
 ### Timer
 ### Task Counter
-### Progress Bar
+### Progress
 ### Calendar
 ### Leaderboard
-### Task list
+### Task List
 ### Challenge Bar
 
 ## Code
 ### HTML
 ### CSS
+* Blinking animations to draw the user's attention to the information
 ### JavaScript
 ### jQuery
 ### JSON
+* Data of first and last names, along with a number to correspond to the user's opponent
 ### ResponsiveVoice
+* Added voice features to assist in saving time, giving the user an overview of their month
+### Audio
+* Sound effects that act to motivate users
 
 ## Note
 Best viewed in Google Chrome.
