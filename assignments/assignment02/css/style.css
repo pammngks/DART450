@@ -112,27 +112,73 @@ text-transform:uppercase;
   order: 3;
 }
 
-/* DASHBOARD CONTAINER ELEMENTS */
+/* DASHBOARD */
 #container {
   position: relative;
   width: 100%;
-  display: flex;
-  -webkit-flex-wrap: wrap; /* If necessary, wrap items */
-  flex-wrap: wrap;
-  padding: 20px;
+  margin: 10px;
 }
 
-/* Task List */
+#dashLeft{
+  width: 50vw;
+  float: left;
+  /*background-color: pink;*/
+}
+
+#dashRight {
+  width: 50vw;
+  float: right;
+  /*background-color: blue;*/
+}
+
+#progressBar {
+  padding: 20px;
+  width: 620px;
+  background-color: #EFEFEF;
+  border-radius: 2px;
+  height: 150px;
+  margin: 10px;
+  font-weight:300;
+  font-size: 14px;
+  display: inline-block;
+  cursor: pointer;
+}
+
 #taskList {
   padding: 20px;
   width: 600px;
   background-color: #EFEFEF;
   border-radius: 2px;
   margin: 10px;
-  float: right;
-  order: 1;
+  display: block;
+  cursor: pointer;
 }
 
+#leaderboard {
+  padding: 20px;
+  width: 350px;
+  background-color: #EFEFEF;
+  border-radius: 2px;
+  height: 200px;
+  margin: 10px;
+  padding: 20px;
+  line-height: 22px;
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+}
+
+#calendar {
+  width: 250px;
+  margin:10px;
+  border-radius:5px;
+  text-align:center;
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+}
+
+/* Task List Elements */
 #taskList form {
   display: inline-block;
   width: 500px;
@@ -180,19 +226,7 @@ ol li {
   opacity: 0.2;
 }
 
-/* Leaderboard container */
-#leaderboard {
-  padding: 20px;
-  width: 300px;
-  background-color: #EFEFEF;
-  border-radius: 2px;
-  height: 200px;
-  margin: 10px;
-  padding: 20px;
-  line-height: 22px;
-  order: 2;
-}
-
+/* Leaderboard elements */
 #leaderboard h1 {
   font-size: 14px;
   text-align: center;
@@ -240,19 +274,7 @@ ol li {
   background-color: rgb(213,213,213);
 }
 
-/* Progress Bar */
-#progressBar {
-  padding: 20px;
-  width: 600px;
-  background-color: #EFEFEF;
-  border-radius: 2px;
-  height: 150px;
-  margin: 10px;
-  order: 3;
-  font-weight:300;
-  font-size: 14px;
-}
-
+/* Progress Bar Elements */
 #progressBar h1 {
   font-size: 14px;
   text-align: center;
@@ -274,15 +296,7 @@ ol li {
   animation:blink 1000ms infinite alternate;
 }
 
-/* Calendar */
-#calendar{
-  width: 250px;
-  margin:10px;
-  border-radius:5px;
-  text-align:center;
-  order: 4;
-}
-
+/* Calendar Elements*/
 #calendar h1{
   background:white;
   border-radius:2px 2px 0 0;
@@ -337,15 +351,6 @@ ol li {
 #calendar tr:last-of-type td:first-of-type{border-radius:0 0 0 5px;}
 #calendar tr:last-of-type td:last-of-type{border-radius:0 0 5px 0;}
 
-/* Glitch effect */
-.glitch {
-  z-index: 1;
-  height: 100vh;
-  width: 100vw;
-  background-color: black;
-  position: absolute;
-  display: none;
-}
 /* Elements outside of container  start here */
 /* Challenge section */
 #challenge {
@@ -466,12 +471,12 @@ position: absolute;
   background-color: #fff;
 }
 
-/* Page glitches */
-.pageGlitch {
-  animation: glitch .3s cubic-bezier(.25,.46,.45,.94) both infinite;
+/* Page Glitches */
+.shake {
+  animation: shake 1s cubic-bezier(.25,.46,.45,.94) both infinite;
 }
 
-@keyframes glitch {
+@keyframes shake {
     0% {
         transform: translate(0)
     }
@@ -490,4 +495,13 @@ position: absolute;
     to {
         transform: translate(0)
     }
+}
+
+.glitch {
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position: absolute;
+  display: none;
 }
