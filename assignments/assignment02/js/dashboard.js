@@ -23,8 +23,13 @@ $(document).ready(function() {
   userProfiles();
   // Use responsiveVoice library in order to speak on mouseover
   voiceOver();
-  // Pop up
+  // Allow challenge to pop up
   popUp();
+  // Make dashboard sections draggable
+  $('#progressBar').draggable();
+  $('#calendar').draggable();
+  $('#leaderboard').draggable();
+  $('#taskList').draggable();
 });
 
 // FUNCTION: Add items to a list and keep count of the amount of tasks
@@ -109,17 +114,17 @@ function pageGlitch() {
     // Each time a click is generated, add it to the count
     pageCount++;
     // Various if statements to render the page 'difficult' to use
-    if (pageCount == 50){
+    if (pageCount == 30){
       // Expose a class that will turn the page black with external css styling
       $('body').addClass('glitch');
     }
 
-    if (pageCount == 15){
+    if (pageCount == 20){
         // Expose a class that will shake each div element
         $('div').addClass('shake');
     }
 
-    if (pageCount == 20) {
+    if (pageCount == 25) {
       // Go through each div on the page
       $('div').each(function(){
         // Select a random location anywhere within the window
@@ -131,8 +136,8 @@ function pageGlitch() {
           top: y + 'px',
           left: x + 'px'});
           $(this).removeClass('shake');
+        $(this).draggable();
         });
-
       };
     });
   };
