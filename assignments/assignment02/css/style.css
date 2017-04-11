@@ -99,6 +99,9 @@ text-transform:uppercase;
 #timer {
   color: #fff;
   text-align: center;
+  font-size: 60px;
+  position: relative;
+  bottom: 15px;
   flex: 1;
   -webkit-flex:1;
   order: 2;
