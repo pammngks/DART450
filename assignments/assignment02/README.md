@@ -6,12 +6,12 @@ This website aims to give order to our hectic day in a way that motivates you to
 The web can be used as a way to organize our thoughts. This is evident through the various tools we use to keep us organized and on track of our goals. This website aims to form a critique on such apps and the idea of productivity by using the web as a means of pushing ourselves to the limits.
 
 ## Code
-HTML
-CSS
-JavaScript
-jQuery
-JSON
-ResponsiveVoice
+### HTML
+### CSS
+### JavaScript
+### jQuery
+### JSON
+### ResponsiveVoice
 
 ## Note
 Best viewed in Google Chrome.
