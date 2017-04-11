@@ -59,6 +59,7 @@ function taskList() {
     updateTotal();
     // Set up variables for audio files
     var success = document.getElementById('success');
+    success.volume = 0.5;
     // Play audio depending on class
     if ($(this).hasClass('done')){
       success.play();
