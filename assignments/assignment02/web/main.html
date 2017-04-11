@@ -49,19 +49,8 @@ Pam Menegakis
 <!-- CONTAINER: Wraps around each section -->
 <div id="container">
 
-  <!-- SECTION 1: User's task list which allows them to add a task and remove it when completed -->
-  <div id="taskList">
-    <form name="toDoList">
-      <input type="text" name="listItem" placeholder="What do you need to do?"/>
-    </form>
-
-    <div id="add">Add</div>
-    <br></br>
-    <!-- Elements will be added to an ordered list with external scripts -->
-    <ol class="task"></ol>
-  </div>
-
-  <!-- SECTION 2: User's progress of tasks that are left to do and tasks that have already been completed -->
+<section id="dashLeft">
+  <!-- SECTION 1: User's progress of tasks that are left to do and tasks that have already been completed -->
   <div id="progressBar">
     <h1>Your Progress</h1>
     <p id="completed">Completed: 0</p>
@@ -70,6 +59,7 @@ Pam Menegakis
     <p id="celebration"></p>
   </div>
 
+<!-- SECTION 2 -->
   <div id="calendar">
   <table>
     <h1 class="month">April</h1>
@@ -81,7 +71,7 @@ Pam Menegakis
   </table>
 </div>
 
-  <!-- SECTION 4: A leaderboard of the user's friends ranking them based on productivity levels -->
+  <!-- SECTION 3: A leaderboard of the user's friends ranking them based on productivity levels -->
   <div id="leaderboard">
     <h1>Leaderboard</h1>
     <div id="userName">
@@ -101,9 +91,22 @@ Pam Menegakis
       <p class="user highlight">0</p>
     </div>
   </div>
-</div>
+</section>
+<!-- SECTION 4: User's task list which allows them to add a task and remove it when completed -->
+<section id="dashRight">
+  <div id="taskList">
+    <form name="toDoList">
+      <input type="text" name="listItem" placeholder="What do you need to do?"/>
+    </form>
 
-<!-- SECTION 3: The user is able to challenge friends and compete with them in order to see who could complete the most tasks -->
+    <div id="add">Add</div>
+    <br></br>
+    <!-- Elements will be added to an ordered list with external scripts -->
+    <ol class="task"></ol>
+  </div>
+</section>
+</div>
+<!-- SECTION 5: The user is able to challenge friends and compete with them in order to see who could complete the most tasks -->
 <div id="challenge">
   <!-- Pop up -->
   <div class="popUp">
@@ -139,7 +142,7 @@ Pam Menegakis
 <!-- Audio files for external script -->
 <audio id="success" src="../audio/success.mp3"></audio>
 
-<audio id="glitch" src="../audio/glitch.mp3"></audio>
+<!-- <audio id="glitch" src="../audio/glitch.mp3"></audio> -->
 
 
 <!-- <audio id="failure" src="../audio/failure.mp3"></audio> -->
