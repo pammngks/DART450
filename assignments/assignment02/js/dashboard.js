@@ -62,6 +62,10 @@ function taskList() {
     // Play audio depending on class
     if ($(this).hasClass('done')){
       success.play();
+      $('#progressBar').css('background-color','rgb(236,242,114)');
+    }
+    else {
+      $('#progressBar').css('background-color','rgb(213,213,213)');
     }
   });
 
@@ -79,8 +83,8 @@ function taskList() {
     // Update the total in the header of web page
     $('.counter').text('You have ' + totalTasks + ' tasks to complete');
     $('.user').text(tasksCompleted);
-    $('#toComplete').text('Incomplete: ' + totalTasks);
-    $('#completed').text('Completed: ' + tasksCompleted);
+    $('#toComplete span').text(totalTasks);
+    $('#completed span').text(tasksCompleted);
     // Create variable to hold text
     var productivityLevel = "";
     // If user completes more tasks than the total
