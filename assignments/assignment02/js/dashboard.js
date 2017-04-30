@@ -158,7 +158,6 @@ function pageGlitch() {
     // Displays the appropriate greeting based on the current time
     if (hourNow > 18) {
       greeting = 'Good evening';
-      $('#calendar td').addClass('current');
     }
 
     else if (hourNow > 12) {
@@ -171,10 +170,15 @@ function pageGlitch() {
 
     else {
       greeting = 'Welcome';
+      // Add class to calendar that highlights today's date
+      $('#calendar td').addClass('current');
     }
+
+
     // Write the greeting in the header
     document.getElementById('hello').innerHTML = greeting;
     console.log('greeting has loaded');
+    // Add a class to the calendar if date matches today
     $('td:eq(' + today.getDay() + ')').addClass('current');
   };
 
@@ -240,7 +244,7 @@ function pageGlitch() {
     });
   }
 
-  // FUNCTION: Pop up
+  // FUNCTION: Challenge pop up
   function popUp(){
     var div = $('.popUp');
     var interval = 2000;
