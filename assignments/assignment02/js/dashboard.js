@@ -235,6 +235,9 @@ function pageGlitch() {
     $('.month').mouseover(function (){
       responsiveVoice.speak("Looks like a busy month.", "US English Male");
     });
+    $('.current').mouseover(function (){
+      responsiveVoice.speak("Here we are, today.", "US English Male");
+    });
   }
 
   // FUNCTION: Pop up
