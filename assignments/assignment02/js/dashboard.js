@@ -70,6 +70,7 @@ function taskList() {
     }
   });
 
+  // Remove task on click
   $('.task').on('dblclick', 'li', function(){
     $(this).fadeOut('slow');
   });
@@ -91,18 +92,25 @@ function taskList() {
     // If user completes more tasks than the total
     if (tasksCompleted > totalTasks) {
       productivityLevel = "You have no life!";
-      console.log('User is productive');
+      console.log('User is productive.');
     }
     // If user completes less tasks than the total
     else if (tasksCompleted < totalTasks) {
       productivityLevel = "You're just lazy.";
-      console.log('User is not productive');
+      console.log('User is not productive.');
     }
     // If user completes the same amount of tasks as total
     else if (tasksCompleted == totalTasks){
       productivityLevel = "Do something!";
-      console.log('User is just as productive');
+      console.log('User is just as productive.');
     }
+    // If user successfully completed five tasks, change the background color
+    if (tasksCompleted == 5) {
+      $('.color-change').animate({
+        backgroundColor: 'rgb(77,209,209)'}, 'slow');
+      console.log('User has completed five tasks.');
+    }
+
     // Write text in div
     $('#celebration').text(productivityLevel);
   }
