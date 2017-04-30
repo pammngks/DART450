@@ -158,6 +158,7 @@ function pageGlitch() {
     // Displays the appropriate greeting based on the current time
     if (hourNow > 18) {
       greeting = 'Good evening';
+      $('#calendar td').addClass('current');
     }
 
     else if (hourNow > 12) {
@@ -174,6 +175,7 @@ function pageGlitch() {
     // Write the greeting in the header
     document.getElementById('hello').innerHTML = greeting;
     console.log('greeting has loaded');
+    $('td:eq(' + today.getDay() + ')').addClass('current');
   };
 
   // FUNCTION: Start a timer on page load
