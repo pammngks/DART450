@@ -498,6 +498,9 @@ position: absolute;
 .shake {
   animation: shake 1s cubic-bezier(.25,.46,.45,.94) both infinite;
 }
+.shake-2 {
+  animation: shake 0.1s cubic-bezier(.25,.46,.45,.94) both infinite;
+}
 
 @keyframes shake {
     0% {
