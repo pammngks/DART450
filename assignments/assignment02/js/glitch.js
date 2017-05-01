@@ -15,7 +15,7 @@ function pageGlitch() {
     // Each time a click is generated, add it to the count
     pageCount++;
     // Various if statements to render the page 'difficult' to use
-    if (pageCount == 50){
+    if (pageCount >= 50){
       // Expose a class that will turn the page black with external css styling
       $('.glitch').fadeIn('fast');
       console.log('Error has been established.');
@@ -28,6 +28,7 @@ function pageGlitch() {
     }
 
     if (pageCount == 22) {
+      // Expose a class that will shake each div element faster
       $('div').addClass('shake-2');
       console.log('The page is shaking some more.');
     }
@@ -43,7 +44,6 @@ function pageGlitch() {
           position: 'absolute',
           top: y + 'px',
           left: x + 'px'});
-          $(this).removeClass('shake');
         $(this).draggable();
         });
       };

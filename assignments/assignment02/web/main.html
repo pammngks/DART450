@@ -42,9 +42,9 @@ Pam Menegakis
 <body class="color-change">
 
   <!-- GLITCH: This div will only be exposed after 50 page clicks. -->
-  <div class="glitch">
+  <section class="glitch">
     <h1> Error. That page doesn't exist anymore. Error. That page doesn't exist anymore. Error. That page doesn't exist anymore. Error. That page doesn't exist anymore. Error. That page doesn't exist anymore. Error. That page doesn't exist anymore. Error. That page doesn't exist anymore.</h1>
-  </div>
+  </section>
 
 
 <!-- HEADER: Time based greeting and amount of tasks to complete -->
@@ -98,9 +98,12 @@ Pam Menegakis
       <p class="user highlight">0</p>
     </div>
   </div>
+  <!-- End of left side of the dashboard -->
 </section>
+
 <!-- SECTION 4: User's task list which allows them to add a task and remove it when completed -->
 <section id="dashRight">
+  <!-- Everything on the right side of the dashboard -->
   <div id="taskList">
     <form name="toDoList">
       <input type="text" name="listItem" placeholder="What do you need to do?"/>
@@ -111,8 +114,10 @@ Pam Menegakis
     <!-- Elements will be added to an ordered list with external scripts -->
     <ol class="task"></ol>
   </div>
+  <!-- End of right side of the dashboard -->
 </section>
 </div>
+
 <!-- SECTION 5: The user is able to challenge friends and compete with them in order to see who could complete the most tasks -->
 <div id="challenge">
   <!-- Pop up -->
@@ -122,9 +127,9 @@ Pam Menegakis
   </div>
   <!-- Current user -->
   <div class="accepted">
-
     <h3>Productivity Challenge</h3>
 
+    <!-- User's profile -->
     <div class="profile left">
       <img class="image" src="../images/user.jpg">
     </div>
@@ -134,7 +139,7 @@ Pam Menegakis
       <p id="currentUser" class="user">0</p>
     </div>
 
-    <!-- Opponent -->
+    <!-- Opponent's profile -->
     <div class="profile right random"></div>
     <div id="opponentChallenge">
       <h1 class="user3"></h1>
@@ -145,8 +150,9 @@ Pam Menegakis
 </div>
 
 <!-- Audio files for external script -->
-<audio id="success" src="../audio/success.mp3"></audio>
+<audio id="success" src="../audio/success.mp3"></audio> 
 
+<!-- Other audio files if needed -->
 <!-- <audio id="glitch" src="../audio/glitch.mp3"></audio> -->
 <!-- <audio id="failure" src="../audio/failure.mp3"></audio> -->
 </body>

@@ -30,6 +30,7 @@ $(document).ready(function() {
   $('#calendar').draggable();
   $('#leaderboard').draggable();
   $('#taskList').draggable();
+  $('.glitch').draggable();
 });
 
 // FUNCTION: Add items to a list and keep count of the amount of tasks
@@ -144,25 +145,29 @@ function taskList() {
       $('#calendar td').addClass('current');
     }
 
-
     // Write the greeting in the header
     document.getElementById('hello').innerHTML = greeting;
-    console.log('greeting has loaded');
     // Add a class to the calendar if date matches today
     $('td:eq(' + today.getDay() + ')').addClass('current');
+
+    console.log('greeting has loaded');
   };
 
   // FUNCTION: Start a timer on page load
   function timer(){
+    // Show the timer in the header div
     $('#header').prepend('<p id="timer"><label id="minutes">00</label>:<label id="seconds">00</label></p>');
+    // Start timer at 0
     var totalSeconds = 0;
     setInterval(setTime, 1000);
+    // Increase timer by 1 every second
     function setTime()
     {
       ++totalSeconds;
       $('#timer > #seconds').html(pad(totalSeconds%60));
       $('#timer > #minutes').html(pad(parseInt(totalSeconds/60)));
     }
+
     function pad(val)
     {
       var valString = val + "";
@@ -204,17 +209,20 @@ function taskList() {
   function voiceOver(){
     // When user hovers over this class, say something
     $('.hastask').mouseover(function (){
+      // Tell the user they are busy
       responsiveVoice.speak("Busy", "US English Male");
     });
     $('.month').mouseover(function (){
+      // Tell the user they have a busy month
       responsiveVoice.speak("Looks like a busy month.", "US English Male");
     });
     $('.current').mouseover(function (){
+      // Tell the user that this date is in fact today
       responsiveVoice.speak("Here we are, today.", "US English Male");
     });
   }
 
-  // FUNCTION: Challenge pop up
+  // FUNCTION: Function that calls the challenge pop up to display
   function popUp(){
     var div = $('.popUp');
     var interval = 2000;
@@ -224,6 +232,7 @@ function taskList() {
       console.log('Asking user to accept challenge.');
     }, interval);
 
+    // If the user accepts by clicking on the button, do this
     $('.acceptBtn').click(function(){
       $(div).fadeOut();
       $(div).remove();
