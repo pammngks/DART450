@@ -17,16 +17,19 @@ function pageGlitch() {
     // Various if statements to render the page 'difficult' to use
     if (pageCount == 50){
       // Expose a class that will turn the page black with external css styling
-      $('body').addClass('glitch');
+      $('.glitch').fadeIn('fast');
+      console.log('Error has been established.');
     }
 
     if (pageCount == 20){
         // Expose a class that will shake each div element
         $('div').addClass('shake');
+        console.log('The page is shaking.');
     }
 
     if (pageCount == 22) {
       $('div').addClass('shake-2');
+      console.log('The page is shaking some more.');
     }
 
     if (pageCount == 24) {
