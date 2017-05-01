@@ -18,6 +18,7 @@ $(document).ready(function() {
   // Keeps count of the tasks a user adds to the list
   taskList();
   // Glitches the page as the user interacts with it more
+  // This function is located in glitch.js
   pageGlitch();
   // Choose a random image for the user's challenge opponent
   userProfiles();

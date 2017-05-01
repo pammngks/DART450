@@ -31,7 +31,6 @@ Pam Menegakis
   <script src="../js/leaderboard.js" content="text/javascript"></script>
   <script src="../js/glitch.js" content="text/javascript"></script>
 
-
   <!-- Responsive Voice Library -->
   <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
   <!-- Blast  -->
@@ -39,46 +38,46 @@ Pam Menegakis
 
 </head>
 
+<!-- The user's dashboard, consisting of various sections -->
 <body class="color-change">
 
-  <!-- GLITCH: This div will only be exposed after 50 page clicks. -->
+  <!-- GLITCH: This div will only be exposed after 50 page clicks with external scripts -->
   <section class="glitch">
     <h1> Error. That page doesn't exist anymore. Error. That page doesn't exist anymore. Error. That page doesn't exist anymore. Error. That page doesn't exist anymore. Error. That page doesn't exist anymore. Error. That page doesn't exist anymore. Error. That page doesn't exist anymore.</h1>
   </section>
 
-
-<!-- HEADER: Time based greeting and amount of tasks to complete -->
-<div id="header" class="color-change">
-  <p id="hello"></p>
-  <p class="counter">You have 0 tasks to complete</p>
-</div>
-
-<!-- CONTAINER: Wraps around each section -->
-<div id="container">
-
-  <!-- SECTION 1: User's progress of tasks that are left to do and tasks that have already been completed -->
-<section id="dashLeft">
-  <div id="progressBar">
-    <h1>Your Progress</h1>
-    <div id="completed">Completed <span>0</span></div>
-    <div id="toComplete">Incomplete <span>0</span></div>
-    <!-- Progess message -->
-    <p id="celebration"></p>
+  <!-- HEADER: Time based greeting and amount of tasks to complete -->
+  <div id="header" class="color-change">
+    <p id="hello"></p>
+    <p class="counter">You have 0 tasks to complete</p>
   </div>
 
-<!-- SECTION 2: User's month overview. -->
-  <div id="calendar">
-  <table>
-    <h1 class="month">May</h1>
-    <tr><td class="lastmonth">30</td><td>1</td><td>2</td><td>3</td><td class="hastask">4</td><td>5</td><td>6</td></tr>
-    <tr><td>7</td><td class="hastask">8</td><td class="hastask">9</td><td>10</td><td>11</td><td class="hastask">12</td><td>13</td></tr>
-    <tr><td>14</td><td class="hastask">15</td><td>16</td><td>17</td><td class="hastask">18</td><td>19</td><td>20</td></tr>
-    <tr><td class="hastask">21</td><td>22</td><td class="hastask">23</td><td>24</td><td class="hastask">25</td><td class="hastask">26</td><td>27</td></tr>
-    <tr><td>28</td><td>29</td><td class="hastask">30</td><td class="hastask">31</td><td class="lastmonth">1</td><td class="lastmonth">2</td><td class="lastmonth">3</td></tr>
-  </table>
-</div>
+  <!-- CONTAINER: Wraps around each section -->
+  <div id="container">
 
-  <!-- SECTION 3: A leaderboard of the user's friends ranking them based on productivity levels -->
+  <!-- SECTION 1: PROGRESSBAR User's progress of tasks that are left to do and tasks that have already been completed -->
+  <section id="dashLeft">
+    <div id="progressBar">
+      <h1>Your Progress</h1>
+      <div id="completed">Completed <span>0</span></div>
+      <div id="toComplete">Incomplete <span>0</span></div>
+      <!-- Progess message -->
+      <p id="celebration"></p>
+    </div>
+
+  <!-- SECTION 2: CALENDAR User's month overview. -->
+    <div id="calendar">
+    <table>
+      <h1 class="month">May</h1>
+      <tr><td class="lastmonth">30</td><td>1</td><td>2</td><td>3</td><td class="hastask">4</td><td>5</td><td>6</td></tr>
+      <tr><td>7</td><td class="hastask">8</td><td class="hastask">9</td><td>10</td><td>11</td><td class="hastask">12</td><td>13</td></tr>
+      <tr><td>14</td><td class="hastask">15</td><td>16</td><td>17</td><td class="hastask">18</td><td>19</td><td>20</td></tr>
+      <tr><td class="hastask">21</td><td>22</td><td class="hastask">23</td><td>24</td><td class="hastask">25</td><td class="hastask">26</td><td>27</td></tr>
+      <tr><td>28</td><td>29</td><td class="hastask">30</td><td class="hastask">31</td><td class="lastmonth">1</td><td class="lastmonth">2</td><td class="lastmonth">3</td></tr>
+    </table>
+  </div>
+
+  <!-- SECTION 3: LEADERBOARD A leaderboard of the user's friends ranking them based on productivity levels -->
   <div id="leaderboard">
     <h1>Leaderboard</h1>
     <div id="userName">
@@ -99,58 +98,62 @@ Pam Menegakis
     </div>
   </div>
   <!-- End of left side of the dashboard -->
-</section>
+  </section>
 
-<!-- SECTION 4: User's task list which allows them to add a task and remove it when completed -->
-<section id="dashRight">
-  <!-- Everything on the right side of the dashboard -->
-  <div id="taskList">
-    <form name="toDoList">
-      <input type="text" name="listItem" placeholder="What do you need to do?"/>
-    </form>
+  <!-- SECTION 4: TASK LIST User's task list which allows them to add a task and remove it when completed -->
+  <section id="dashRight">
+    <!-- Everything on the right side of the dashboard -->
+    <div id="taskList">
+      <form name="toDoList">
+        <input type="text" name="listItem" placeholder="What do you need to do?"/>
+      </form>
 
-    <div id="add">Add</div>
-    <br></br>
-    <!-- Elements will be added to an ordered list with external scripts -->
-    <ol class="task"></ol>
+      <div id="add">Add</div>
+      <br></br>
+      <!-- Elements will be added to an ordered list with external scripts -->
+      <ol class="task"></ol>
+    </div>
+    <!-- End of right side of the dashboard -->
+  </section>
   </div>
-  <!-- End of right side of the dashboard -->
-</section>
-</div>
 
-<!-- SECTION 5: The user is able to challenge friends and compete with them in order to see who could complete the most tasks -->
-<div id="challenge">
-  <!-- Pop up -->
-  <div class="popUp">
-    <h1><span class="user3"></span> wants to challenge you.</h1>
-    <button class="acceptBtn">Accept</button>
-  </div>
-  <!-- Current user -->
-  <div class="accepted">
-    <h3>Productivity Challenge</h3>
+  <!-- SECTION 5: CHALLENGE BAR The user is able to challenge friends and compete with them in order to see who could complete the most tasks -->
+  <div id="challenge">
 
-    <!-- User's profile -->
-    <div class="profile left">
-      <img class="image" src="../images/user.jpg">
+    <!-- Pop up -->
+    <div class="popUp">
+      <h1><span class="user3"></span> wants to challenge you.</h1>
+      <button class="acceptBtn">Accept</button>
     </div>
 
-    <div id="userChallenge">
-      <h1>You</h1>
-      <p id="currentUser" class="user">0</p>
+    <!-- Current user -->
+    <div class="accepted">
+      <h3>Productivity Challenge</h3>
+
+      <!-- User's profile -->
+      <div class="profile left">
+        <img class="image" src="../images/user.jpg">
+      </div>
+
+      <div id="userChallenge">
+        <h1>You</h1>
+        <!-- Start the user's count at 0, then change it with external js scripts -->
+        <p id="currentUser" class="user">0</p>
+      </div>
+
+      <!-- Opponent's profile -->
+      <div class="profile right random"></div>
+      <div id="opponentChallenge">
+        <!-- The user's opponent will always be user3, which automatically changes on each page load -->
+        <h1 class="user3"></h1>
+        <p class="opponent"></p>
     </div>
 
-    <!-- Opponent's profile -->
-    <div class="profile right random"></div>
-    <div id="opponentChallenge">
-      <h1 class="user3"></h1>
-      <p class="opponent"></p>
+  </div>
   </div>
 
-</div>
-</div>
-
-<!-- Audio files for external script -->
-<audio id="success" src="../audio/success.mp3"></audio> 
+<!-- AUDIO: files for external script -->
+<audio id="success" src="../audio/success.mp3"></audio>
 
 <!-- Other audio files if needed -->
 <!-- <audio id="glitch" src="../audio/glitch.mp3"></audio> -->
